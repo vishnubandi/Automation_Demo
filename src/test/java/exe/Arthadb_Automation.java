@@ -21,6 +21,7 @@ import jxl.write.WritableWorkbook;
 import jxl.write.WriteException;
 import jxl.write.biff.RowsExceededException;
 
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
@@ -30,15 +31,23 @@ public class Arthadb_Automation
 	public static String TC001Result,TC001Rec,TC002Result,TC002Rec,TC003Result,TC003Rec,TC004Result,TC004Rec,TC005Result,TC005Rec,TC006Result,TC006Rec,TC007Result,TC007Rec,TC008Result,TC008Rec,TC009Result,TC009Rec,TC010Result,TC010Rec,TC011Result,TC011Rec,TC012Result,TC012Rec;
 	public static int TC001c,TC001RecCount,TC002c,TC002RecCount,TC003c,TC003RecCount,TC004c,TC004RecCount,TC005c,TC005RecCount,TC006c,TC006RecCount,TC007c,TC007RecCount,TC008c,TC008RecCount,TC009c,TC009RecCount,TC010c,TC010RecCount,TC011c,TC011RecCount,TC012c,TC012RecCount;
 	Connection con;
+	Statement stmt;
+	@BeforeMethod
+	public void DB_Details() throws ClassNotFoundException, SQLException 
+	  {
+		Class.forName("com.mysql.jdbc.Driver");
+		  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql"); 
+		  stmt=con.createStatement();  
+	  }
 	@Test(priority=1)
 	public void ArthaDB_ProdCodes_Check_TC001() throws SQLException, RowsExceededException, WriteException, IOException 
 	  {
 		 StringBuffer TC001r=new StringBuffer();
 		  try
 		  {
-			  Class.forName("com.mysql.jdbc.Driver");
-			  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql");   
-			  Statement stmt=con.createStatement();  
+//			  Class.forName("com.mysql.jdbc.Driver");
+//			  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql");   
+//			  Statement stmt=con.createStatement();  
 			  ResultSet rs=stmt.executeQuery("SELECT * FROM arthadb.audit where ProdCodes is null"); 
 			  List<String> TC001rs=new ArrayList<String>();
 			  while (rs.next()) 
@@ -65,7 +74,7 @@ public class Arthadb_Automation
 				        Assert.assertEquals("AUDIT-Product Codes check is Failed at UniqueID="+TC001r, 0, TC001c);
 				  }  
 		  }
-		  catch (ClassNotFoundException e1) 
+		  catch (Exception e1) 
 		  {
 				  e1.printStackTrace();
 		  } 
@@ -76,9 +85,9 @@ public class Arthadb_Automation
 		 StringBuffer TC002r=new StringBuffer();
 		  try
 		  {
-			  Class.forName("com.mysql.jdbc.Driver");
-			  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql");   
-			  Statement stmt=con.createStatement();  
+//			  Class.forName("com.mysql.jdbc.Driver");
+//			  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql");   
+//			  Statement stmt=con.createStatement();  
 			  ResultSet rs=stmt.executeQuery("SELECT *FROM arthadb.audit where datediff(ExpDate,EffDate)<0"); 
 			  List<String> TC002rs=new ArrayList<String>();
 			  while (rs.next()) 
@@ -109,7 +118,7 @@ public class Arthadb_Automation
 				        Assert.assertEquals("AUDIT-Exp and Eff Date check is Failed at UniqueID="+TC002r, 0, TC002c);
 				  }  
 		  }
-		  catch (ClassNotFoundException e1) 
+		  catch (Exception e1) 
 		  {
 				  e1.printStackTrace();
 		  } 
@@ -120,9 +129,9 @@ public class Arthadb_Automation
 		 StringBuffer TC003r=new StringBuffer();
 		  try
 		  {
-			  Class.forName("com.mysql.jdbc.Driver");
-			  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql");   
-			  Statement stmt=con.createStatement();  
+//			  Class.forName("com.mysql.jdbc.Driver");
+//			  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql");   
+//			  Statement stmt=con.createStatement();  
 			  ResultSet rs=stmt.executeQuery("SELECT * FROM arthadb.payments where Account_Number like '0%'"); 
 			  List<String> TC003rs=new ArrayList<String>();
 			  while (rs.next()) 
@@ -153,7 +162,7 @@ public class Arthadb_Automation
 				        Assert.assertEquals("PAYMENTS-Account Number check is Failed at Invoice_Number="+TC003r, 0, TC003c);
 				  }  
 		  }
-		  catch (ClassNotFoundException e1) 
+		  catch (Exception e1) 
 		  {
 				  e1.printStackTrace();
 		  } 
@@ -164,9 +173,9 @@ public class Arthadb_Automation
 			  	StringBuffer TC004r=new StringBuffer();
 				  try
 				  {
-					  Class.forName("com.mysql.jdbc.Driver");
-					  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql");   
-					  Statement stmt=con.createStatement();  
+//					  Class.forName("com.mysql.jdbc.Driver");
+//					  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql");   
+//					  Statement stmt=con.createStatement();  
 					  ResultSet rs=stmt.executeQuery("SELECT * fROM arthadb.payments where ChargeType not in('J','N')"); 
 					  List<String> TC004rs=new ArrayList<String>();
 					  while (rs.next()) 
@@ -197,7 +206,7 @@ public class Arthadb_Automation
 						        Assert.assertEquals("PAYMENTS-Charge Type check is Failed at Account_Number(s)="+TC004r, 0, TC004c);
 						  }  
 				  }
-				  catch (ClassNotFoundException e1) 
+				  catch (Exception e1) 
 				  {
 						  e1.printStackTrace();
 				  } 
@@ -208,9 +217,9 @@ public class Arthadb_Automation
 			  StringBuffer TC005r=new StringBuffer();
 				  try
 				  {
-					  Class.forName("com.mysql.jdbc.Driver");
-					  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql");   
-					  Statement stmt=con.createStatement();  
+//					  Class.forName("com.mysql.jdbc.Driver");
+//					  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql");   
+//					  Statement stmt=con.createStatement();  
 					  ResultSet rs=stmt.executeQuery("SELECT *  FROM arthadb.payments where Invoice_Number like '0%'"); 
 					  List<String> TC005rs=new ArrayList<String>();
 					  while (rs.next()) 
@@ -241,7 +250,7 @@ public class Arthadb_Automation
 						        Assert.assertEquals("PAYMENTS-Invoice Number check is Failed at Account_Number(s)="+TC005r, 0, TC005c);
 						  }  
 				  }
-				  catch (ClassNotFoundException e1) 
+				  catch (Exception e1) 
 				  {
 						  e1.printStackTrace();
 				  } 
@@ -252,9 +261,9 @@ public class Arthadb_Automation
 			  StringBuffer TC006r=new StringBuffer();
 				  try
 				  {
-					  Class.forName("com.mysql.jdbc.Driver");
-					  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql");   
-					  Statement stmt=con.createStatement();  
+//					  Class.forName("com.mysql.jdbc.Driver");
+//					  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql");   
+//					  Statement stmt=con.createStatement();  
 					  ResultSet rs=stmt.executeQuery("SELECT * from arthadb.payments where Transaction_Amount=0"); 
 					  List<String> TC006rs=new ArrayList<String>();
 					  while (rs.next()) 
@@ -285,7 +294,7 @@ public class Arthadb_Automation
 						        Assert.assertEquals("PAYMENTS-Transaction Amount check is Failed at Account_Number="+TC006r, 0, TC006c);
 						  }  
 				  }
-				  catch (ClassNotFoundException e1) 
+				  catch (Exception e1) 
 				  {
 						  e1.printStackTrace();
 				  } 
@@ -297,9 +306,9 @@ public class Arthadb_Automation
 			  StringBuffer TC007r=new StringBuffer();
 				  try
 				  {
-					  Class.forName("com.mysql.jdbc.Driver");
-					  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql");   
-					  Statement stmt=con.createStatement();  
+//					  Class.forName("com.mysql.jdbc.Driver");
+//					  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql");   
+//					  Statement stmt=con.createStatement();  
 					  ResultSet rs=stmt.executeQuery("SELECT * from arthadb.payments where ChargeType='N' and ChargeSign!='D' and ChargeSign in('C','D')"); 
 					  List<String> TC007rs=new ArrayList<String>();
 					  while (rs.next()) 
@@ -330,7 +339,7 @@ public class Arthadb_Automation
 						        Assert.assertEquals("PAYMENTS-Charge Sign Codes check is Failed at Account_Number="+TC007r, 0, TC007c);
 						  }  
 				  }
-				  catch (ClassNotFoundException e1) 
+				  catch (Exception e1) 
 				  {
 						  e1.printStackTrace();
 				  } 
@@ -341,9 +350,9 @@ public class Arthadb_Automation
 			  StringBuffer TC008r=new StringBuffer();
 				  try
 				  {
-					  Class.forName("com.mysql.jdbc.Driver");
-					  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql");   
-					  Statement stmt=con.createStatement();  
+//					  Class.forName("com.mysql.jdbc.Driver");
+//					  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql");   
+//					  Statement stmt=con.createStatement();  
 					  ResultSet rs=stmt.executeQuery("SELECT * FROM arthadb.payments where (ChargeType='N' and ChargeSign='D' and Record_Type!='Debit_R5') or (ChargeType='J' and ChargeSign='D' and Record_Type!='Debit_R6') or (ChargeType='J' and ChargeSign='C' and Record_Type!='Credit_R5')"); 
 					  List<String> TC008rs=new ArrayList<String>();
 					  while (rs.next()) 
@@ -374,7 +383,7 @@ public class Arthadb_Automation
 						        Assert.assertEquals("PAYMENTS-Record Type check is Failed at Invoice_Number="+TC008r, 0, TC008c);
 						  }  
 				  }
-				  catch (ClassNotFoundException e1) 
+				  catch (Exception e1) 
 				  {
 						  e1.printStackTrace();
 				  } 
@@ -386,9 +395,9 @@ public class Arthadb_Automation
 			  StringBuffer TC009r=new StringBuffer();
 				  try
 				  {
-					  Class.forName("com.mysql.jdbc.Driver");
-					  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql");   
-					  Statement stmt=con.createStatement();  
+//					  Class.forName("com.mysql.jdbc.Driver");
+//					  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql");   
+//					  Statement stmt=con.createStatement();  
 					  ResultSet rs=stmt.executeQuery("SELECT * FROM arthadb.customers where FirstName is null"); 
 					  List<String> TC009rs=new ArrayList<String>();
 					  while (rs.next()) 
@@ -418,7 +427,7 @@ public class Arthadb_Automation
 						        Assert.assertEquals("CUSTOMERS-First Name check is Failed at SSN="+TC009r, 0, TC009c);
 						  }  
 				  }
-				  catch (ClassNotFoundException e1) 
+				  catch (Exception e1) 
 				  {
 						  e1.printStackTrace();
 				  } 
@@ -430,9 +439,9 @@ public class Arthadb_Automation
 			  StringBuffer TC010r=new StringBuffer();
 				  try
 				  {
-					  Class.forName("com.mysql.jdbc.Driver");
-					  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql");   
-					  Statement stmt=con.createStatement();  
+//					  Class.forName("com.mysql.jdbc.Driver");
+//					  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql");   
+//					  Statement stmt=con.createStatement();  
 					  ResultSet rs=stmt.executeQuery("SELECT * FROM arthadb.customers where SSN is null or length(SSN)!=11"); 
 					  List<String> TC010rs=new ArrayList<String>();
 					  while (rs.next()) 
@@ -462,7 +471,7 @@ public class Arthadb_Automation
 						        Assert.assertEquals("CUSTOMERS- SSN check is Failed at CustomerPK="+TC010r, 0, TC010c);
 						  }  
 				  }
-				  catch (ClassNotFoundException e1) 
+				  catch (Exception e1) 
 				  {
 						  e1.printStackTrace();
 				  } 
@@ -474,9 +483,9 @@ public class Arthadb_Automation
 			  StringBuffer TC011r=new StringBuffer();
 				  try
 				  {
-					  Class.forName("com.mysql.jdbc.Driver");
-					  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql");   
-					  Statement stmt=con.createStatement();  
+//					  Class.forName("com.mysql.jdbc.Driver");
+//					  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql");   
+//					  Statement stmt=con.createStatement();  
 					  ResultSet rs=stmt.executeQuery("SELECT * FROM arthadb.partners where Record_Type is null"); 
 					  List<String> TC011rs=new ArrayList<String>();
 					  while (rs.next()) 
@@ -506,7 +515,7 @@ public class Arthadb_Automation
 						        Assert.assertEquals("PARTNERS-Record Type check is Failed at Partner_Account_Number="+TC011r, 0, TC011c);
 						  }  
 				  }
-				  catch (ClassNotFoundException e1) 
+				  catch (Exception e1) 
 				  {
 						  e1.printStackTrace();
 				  } 
@@ -518,9 +527,9 @@ public class Arthadb_Automation
 			  StringBuffer TC012r=new StringBuffer();
 				  try
 				  {
-					  Class.forName("com.mysql.jdbc.Driver");
-					  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql");   
-					  Statement stmt=con.createStatement();  
+//					  Class.forName("com.mysql.jdbc.Driver");
+//					  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql");   
+//					  Statement stmt=con.createStatement();  
 					  ResultSet rs=stmt.executeQuery("SELECT * FROM arthadb.partners where (Premise_City is null or Premise_City=' ' or Premise_City='')"); 
 					  List<String> TC012rs=new ArrayList<String>();
 					  while (rs.next()) 
@@ -550,9 +559,34 @@ public class Arthadb_Automation
 						        Assert.assertEquals("PARTNERS-City check is Failed at Partner_Account_Number="+TC012r, 0, TC012c);
 						  }  
 				  }
-				  catch (ClassNotFoundException e1) 
+				  catch (Exception e1) 
 				  {
 						  e1.printStackTrace();
 				  } 
 	}
+	public static int Noc;
+	@Test(priority=13)
+  public void PremisesAddressZipPlus4() throws ClassNotFoundException, SQLException 
+  {
+	  ResultSet rs=stmt.executeQuery("SELECT * FROM arthadb.customers where PremisesAddressZipPlus4 is null or length(PremisesAddressZipPlus4)!=5"); 
+	  List<String> Zip_RS=new ArrayList<String>();
+	  while (rs.next()) 
+	  {
+		  Noc=rs.getRow();
+		  Zip_RS.add(rs.getString("SSN"));
+	  }
+	  if(Noc==0)
+	  {
+		  Assert.assertEquals("CUSTOMER - PremisesAddressZipPlus4 check is PASSED", 0, Noc);
+	  }
+	  else
+	  {
+		  StringBuffer Zip_R=new StringBuffer();
+		  for(int k=0;k<Zip_RS.size();k++)
+		  {
+			  Zip_R.append(Zip_RS.get(k)+","); 
+		  }
+		  Assert.assertEquals("CUSTOMER - PremisesAddressZipPlus4 check is Failed at SSN="+Zip_R, 0, Noc);
+	  }
+  }
 }

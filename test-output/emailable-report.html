@@ -31,14 +31,130 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi">0</td><td class="numi">1.4 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">3</td><td class="numi">3</td><td class="numi">0</td><td class="numi_attn">10</td><td class="numi">1.4 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr><th colspan="4">Default test &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="10">exe.Arthadb_Automation</td><td><a href="#m1"><b>ArthaDB_Account_Number_Check_TC003</b>  </a></td><td class="numi">1</td><td>1506582158395</td><td class="numi">6</td></tr><tr class="failedodd"><td><a href="#m2"><b>ArthaDB_ChargeSign_Check_TC007</b>  </a></td><td class="numi">1</td><td>1506582158517</td><td class="numi">5</td></tr><tr class="failedodd"><td><a href="#m3"><b>ArthaDB_ChargeType_Check_TC004</b>  </a></td><td class="numi">1</td><td>1506582158438</td><td class="numi">15</td></tr><tr class="failedodd"><td><a href="#m4"><b>ArthaDB_Customer_FirstName_Check_TC009</b>  </a></td><td class="numi">1</td><td>1506582158561</td><td class="numi">10</td></tr><tr class="failedodd"><td><a href="#m5"><b>ArthaDB_Invoice_Number_Check_TC005</b>  </a></td><td class="numi">1</td><td>1506582158471</td><td class="numi">11</td></tr><tr class="failedodd"><td><a href="#m6"><b>ArthaDB_ProdCodes_Check_TC001</b>  </a></td><td class="numi">1</td><td>1506582158280</td><td class="numi">41</td></tr><tr class="failedodd"><td><a href="#m7"><b>ArthaDB_Record_Type_Check_TC008</b>  </a></td><td class="numi">1</td><td>1506582158539</td><td class="numi">6</td></tr><tr class="failedodd"><td><a href="#m8"><b>ArthaDB_Record_Type_Check_TC010</b>  </a></td><td class="numi">1</td><td>1506582158590</td><td class="numi">11</td></tr><tr class="failedodd"><td><a href="#m9"><b>ArthaDB_Record_Type_Check_TC011</b>  </a></td><td class="numi">1</td><td>1506582158615</td><td class="numi">14</td></tr><tr class="failedodd"><td><a href="#m10"><b>PremisesAddressZipPlus4</b>  </a></td><td class="numi">1</td><td>1506582158678</td><td class="numi">5</td></tr>
 <tr><th colspan="4">Default test &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="1">exe.SampleTC</td><td><a href="#m1"><b>PremisesAddressZipPlus4</b>  </a></td><td class="numi">1</td><td>1506520362332</td><td class="numi">1337</td></tr>
+<tr class="passedodd"><td rowspan="3">exe.Arthadb_Automation</td><td><a href="#m11"><b>ArthaDB_AuditDates_Check_TC002</b>  </a></td><td class="numi">1</td><td>1506582158358</td><td class="numi">16</td></tr><tr class="passedodd"><td><a href="#m12"><b>ArthaDB_Premise_City_Check_TC012</b>  </a></td><td class="numi">1</td><td>1506582158646</td><td class="numi">14</td></tr><tr class="passedodd"><td><a href="#m13"><b>ArthaDB_Transaction_Amount_Check_TC006</b>  </a></td><td class="numi">1</td><td>1506582158500</td><td class="numi">4</td></tr>
 </table>
 <h1>Default test</h1>
-<h2 id="m1">exe.SampleTC:PremisesAddressZipPlus4</h2>
+<h2 id="m1">exe.Arthadb_Automation:ArthaDB_Record_Type_Check_TC011</h2>
+<div style="padding-left:3em">
+<p>PARTNERS-Record Type check is Failed at Partner_Account_Number=15914697799,25710135206, expected:&lt;0&gt; but was:&lt;2&gt;</p>
+junit.framework.Assert.fail(Assert.java:57)
+<br/>at junit.framework.Assert.failNotEquals(Assert.java:329)
+<br/>at junit.framework.Assert.assertEquals(Assert.java:78)
+<br/>at junit.framework.Assert.assertEquals(Assert.java:234)
+<br/>at exe.Arthadb_Automation.ArthaDB_Record_Type_Check_TC011(Arthadb_Automation.java:515)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">exe.Arthadb_Automation:PremisesAddressZipPlus4</h2>
+<div style="padding-left:3em">
+<p>CUSTOMER - PremisesAddressZipPlus4 check is Failed at SSN=563-13-3480,405-05-7405,348-37-6100, expected:&lt;0&gt; but was:&lt;3&gt;</p>
+junit.framework.Assert.fail(Assert.java:57)
+<br/>at junit.framework.Assert.failNotEquals(Assert.java:329)
+<br/>at junit.framework.Assert.assertEquals(Assert.java:78)
+<br/>at junit.framework.Assert.assertEquals(Assert.java:234)
+<br/>at exe.Arthadb_Automation.PremisesAddressZipPlus4(Arthadb_Automation.java:589)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">exe.Arthadb_Automation:ArthaDB_Account_Number_Check_TC003</h2>
+<div style="padding-left:3em">
+<p>PAYMENTS-Account Number check is Failed at Invoice_Number=J91606706e6C122, expected:&lt;0&gt; but was:&lt;1&gt;</p>
+junit.framework.Assert.fail(Assert.java:57)
+<br/>at junit.framework.Assert.failNotEquals(Assert.java:329)
+<br/>at junit.framework.Assert.assertEquals(Assert.java:78)
+<br/>at junit.framework.Assert.assertEquals(Assert.java:234)
+<br/>at exe.Arthadb_Automation.ArthaDB_Account_Number_Check_TC003(Arthadb_Automation.java:162)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">exe.Arthadb_Automation:ArthaDB_ChargeSign_Check_TC007</h2>
+<div style="padding-left:3em">
+<p>PAYMENTS-Charge Sign Codes check is Failed at Account_Number=ACCD101N8776123, expected:&lt;0&gt; but was:&lt;1&gt;</p>
+junit.framework.Assert.fail(Assert.java:57)
+<br/>at junit.framework.Assert.failNotEquals(Assert.java:329)
+<br/>at junit.framework.Assert.assertEquals(Assert.java:78)
+<br/>at junit.framework.Assert.assertEquals(Assert.java:234)
+<br/>at exe.Arthadb_Automation.ArthaDB_ChargeSign_Check_TC007(Arthadb_Automation.java:339)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">exe.Arthadb_Automation:ArthaDB_Invoice_Number_Check_TC005</h2>
+<div style="padding-left:3em">
+<p>PAYMENTS-Invoice Number check is Failed at Account_Number(s)=ACCD101N9990884, expected:&lt;0&gt; but was:&lt;1&gt;</p>
+junit.framework.Assert.fail(Assert.java:57)
+<br/>at junit.framework.Assert.failNotEquals(Assert.java:329)
+<br/>at junit.framework.Assert.assertEquals(Assert.java:78)
+<br/>at junit.framework.Assert.assertEquals(Assert.java:234)
+<br/>at exe.Arthadb_Automation.ArthaDB_Invoice_Number_Check_TC005(Arthadb_Automation.java:250)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">exe.Arthadb_Automation:ArthaDB_Record_Type_Check_TC008</h2>
+<div style="padding-left:3em">
+<p>PAYMENTS-Record Type check is Failed at Invoice_Number=J9908844423C102,J91606706e6C122, expected:&lt;0&gt; but was:&lt;2&gt;</p>
+junit.framework.Assert.fail(Assert.java:57)
+<br/>at junit.framework.Assert.failNotEquals(Assert.java:329)
+<br/>at junit.framework.Assert.assertEquals(Assert.java:78)
+<br/>at junit.framework.Assert.assertEquals(Assert.java:234)
+<br/>at exe.Arthadb_Automation.ArthaDB_Record_Type_Check_TC008(Arthadb_Automation.java:383)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">exe.Arthadb_Automation:ArthaDB_Customer_FirstName_Check_TC009</h2>
+<div style="padding-left:3em">
+<p>CUSTOMERS-First Name check is Failed at SSN=620-74-4374, expected:&lt;0&gt; but was:&lt;1&gt;</p>
+junit.framework.Assert.fail(Assert.java:57)
+<br/>at junit.framework.Assert.failNotEquals(Assert.java:329)
+<br/>at junit.framework.Assert.assertEquals(Assert.java:78)
+<br/>at junit.framework.Assert.assertEquals(Assert.java:234)
+<br/>at exe.Arthadb_Automation.ArthaDB_Customer_FirstName_Check_TC009(Arthadb_Automation.java:427)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">exe.Arthadb_Automation:ArthaDB_ChargeType_Check_TC004</h2>
+<div style="padding-left:3em">
+<p>PAYMENTS-Charge Type check is Failed at Account_Number(s)=ACCD101N8776123, expected:&lt;0&gt; but was:&lt;1&gt;</p>
+junit.framework.Assert.fail(Assert.java:57)
+<br/>at junit.framework.Assert.failNotEquals(Assert.java:329)
+<br/>at junit.framework.Assert.assertEquals(Assert.java:78)
+<br/>at junit.framework.Assert.assertEquals(Assert.java:234)
+<br/>at exe.Arthadb_Automation.ArthaDB_ChargeType_Check_TC004(Arthadb_Automation.java:206)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m9">exe.Arthadb_Automation:ArthaDB_Record_Type_Check_TC010</h2>
+<div style="padding-left:3em">
+<p>CUSTOMERS- SSN check is Failed at CustomerPK=5, expected:&lt;0&gt; but was:&lt;1&gt;</p>
+junit.framework.Assert.fail(Assert.java:57)
+<br/>at junit.framework.Assert.failNotEquals(Assert.java:329)
+<br/>at junit.framework.Assert.assertEquals(Assert.java:78)
+<br/>at junit.framework.Assert.assertEquals(Assert.java:234)
+<br/>at exe.Arthadb_Automation.ArthaDB_Record_Type_Check_TC010(Arthadb_Automation.java:471)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">exe.Arthadb_Automation:ArthaDB_ProdCodes_Check_TC001</h2>
+<div style="padding-left:3em">
+<p>AUDIT-Product Codes check is Failed at UniqueID=J901891D18902,J911620FS4904, expected:&lt;0&gt; but was:&lt;2&gt;</p>
+junit.framework.Assert.fail(Assert.java:57)
+<br/>at junit.framework.Assert.failNotEquals(Assert.java:329)
+<br/>at junit.framework.Assert.assertEquals(Assert.java:78)
+<br/>at junit.framework.Assert.assertEquals(Assert.java:234)
+<br/>at exe.Arthadb_Automation.ArthaDB_ProdCodes_Check_TC001(Arthadb_Automation.java:74)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m11">exe.Arthadb_Automation:ArthaDB_Transaction_Amount_Check_TC006</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m12">exe.Arthadb_Automation:ArthaDB_Premise_City_Check_TC012</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m13">exe.Arthadb_Automation:ArthaDB_AuditDates_Check_TC002</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>
