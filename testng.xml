@@ -13,9 +13,9 @@
       <class name="exe.HS_TS007_Premise_Name_Check"/>
       <class name="exe.HS_TS008_AEPCustomer_Details_Check"/>
       <class name="exe.HS_TS009_AEPAudit_Details_Check"/>
-      <class name="exe.HS_TS010_PaymentsFromPartner_Check"/> -->
+      <class name="exe.HS_TS010_PaymentsFromPartner_Check"/>
+      <class name="exe.ExcelRun"/> -->
       <class name="exe.Arthadb_Automation"/>
-      <class name="exe.ExcelRun"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -532,7 +532,7 @@ public class Arthadb_Automation
 	@Test(priority=13)
 	  public void ArthaDB_MailingAddressZipCode_TC013() throws ClassNotFoundException, SQLException 
 	  {
-		  ResultSet rs=stmt.executeQuery("SELECT * FROM arthadb.customers where MailingAddressZipCode is null or length(PremisesAddressZipPlus4)!=5"); 
+		  ResultSet rs=stmt.executeQuery("SELECT * FROM arthadb.customers where MailingAddressZipCode is null or length(MailingAddressZipCode)!=5"); 
 		  List<String> Zip_RS=new ArrayList<String>();
 		  while (rs.next()) 
 		  {
