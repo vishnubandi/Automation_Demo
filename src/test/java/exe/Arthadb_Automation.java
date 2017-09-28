@@ -529,4 +529,28 @@ public class Arthadb_Automation
 						  e1.printStackTrace();
 				  } 
 	}
+	@Test(priority=13)
+	  public void ArthaDB_MailingAddressZipCode_TC013() throws ClassNotFoundException, SQLException 
+	  {
+		  ResultSet rs=stmt.executeQuery("SELECT * FROM arthadb.customers where MailingAddressZipCode is null or length(PremisesAddressZipPlus4)!=5"); 
+		  List<String> Zip_RS=new ArrayList<String>();
+		  while (rs.next()) 
+		  {
+			  Noc=rs.getRow();
+			  Zip_RS.add(rs.getString("SSN"));
+		  }
+		  if(Noc==0)
+		  {
+			  Assert.assertEquals("CUSTOMER - MailingAddressZipCode check is PASSED", 0, Noc);
+		  }
+		  else
+		  {
+			  StringBuffer Zip_R=new StringBuffer();
+			  for(int k=0;k<Zip_RS.size();k++)
+			  {
+				  Zip_R.append(Zip_RS.get(k)+","); 
+			  }
+			  Assert.assertEquals("CUSTOMER - MailingAddressZipCode check is Failed at SSN="+Zip_R, 0, Noc);
+		  }
+	  }
 }
