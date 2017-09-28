@@ -45,6 +45,7 @@ public class SampleTC
 			  Zip_R.append(Zip_RS.get(k)+","); 
 		  }
 		  Assert.assertEquals("CUSTOMER - PremisesAddressZipPlus4 check is Failed at SSN="+Zip_R, 0, Noc);
+		  System.out.println("CUSTOMER - PremisesAddressZipPlus4 check is FAILED");
 	  }
   }
 }
