@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="2.237" tests="13" errors="0" skipped="0" failures="9">
+<testsuite name="TestSuite" time="0.074" tests="13" errors="0" skipped="0" failures="5">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jre1.8.0_91\bin"/>
@@ -26,7 +26,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 8"/>
-    <property name="classworlds.conf" value="F:\ADS_Automation\Artha_CI_Demo\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf6523680423152457003.tmp"/>
+    <property name="classworlds.conf" value="F:\ADS_Automation\Artha_CI_Demo\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf6428233555311213601.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jre1.8.0_91\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_91/bin/server;C:/Program Files/Java/jre1.8.0_91/bin;C:/Program Files/Java/jre1.8.0_91/lib/amd64;C:\ProgramData\Oracle\Java\javapath;%JAVA_HOME%\bin;C:\Program Files\Java\jdk1.8.0_91\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\MySQL\MySQL Server 5.5\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\GNU\GnuPG\pub;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files\TortoiseGit\bin;C:\apache-maven-3.5.0\bin\bin;C:\Program Files\Git\cmd\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_91\bin;C:\Program Files\Java\jdk1.7.0_25\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\MySQL\MySQL Server 5.5\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\GNU\GnuPG\pub;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;F:\eclipse;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -60,108 +60,67 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="ArthaDB_ProdCodes_Check_TC001" classname="exe.Arthadb_Automation" time="1.204">
-    <failure message="AUDIT-Product Codes check is Failed at UniqueID=J901891D18902,J911620FS4904, expected:&lt;0&gt; but was:&lt;2&gt;" type="junit.framework.AssertionFailedError"><![CDATA[junit.framework.AssertionFailedError: AUDIT-Product Codes check is Failed at UniqueID=J901891D18902,J911620FS4904, expected:<0> but was:<2>
-	at junit.framework.Assert.fail(Assert.java:57)
-	at junit.framework.Assert.failNotEquals(Assert.java:329)
-	at junit.framework.Assert.assertEquals(Assert.java:78)
-	at junit.framework.Assert.assertEquals(Assert.java:234)
-	at exe.Arthadb_Automation.ArthaDB_ProdCodes_Check_TC001(Arthadb_Automation.java:65)
-]]></failure>
-    <system-err><![CDATA[Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
-Thu Sep 28 11:31:29 IST 2017 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-]]></system-err>
-  </testcase>
-  <testcase name="ArthaDB_AuditDates_Check_TC002" classname="exe.Arthadb_Automation" time="0.069"/>
-  <testcase name="ArthaDB_Account_Number_Check_TC003" classname="exe.Arthadb_Automation" time="0.045">
-    <failure message="PAYMENTS-Account Number check is Failed at Invoice_Number=J91606706e6C122, expected:&lt;0&gt; but was:&lt;1&gt;" type="junit.framework.AssertionFailedError"><![CDATA[junit.framework.AssertionFailedError: PAYMENTS-Account Number check is Failed at Invoice_Number=J91606706e6C122, expected:<0> but was:<1>
-	at junit.framework.Assert.fail(Assert.java:57)
-	at junit.framework.Assert.failNotEquals(Assert.java:329)
-	at junit.framework.Assert.assertEquals(Assert.java:78)
-	at junit.framework.Assert.assertEquals(Assert.java:234)
-	at exe.Arthadb_Automation.ArthaDB_Account_Number_Check_TC003(Arthadb_Automation.java:153)
-]]></failure>
-    <system-err><![CDATA[Thu Sep 28 11:31:29 IST 2017 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-]]></system-err>
-  </testcase>
-  <testcase name="ArthaDB_ChargeType_Check_TC004" classname="exe.Arthadb_Automation" time="0.061">
-    <failure message="PAYMENTS-Charge Type check is Failed at Account_Number(s)=ACCD101N8776123, expected:&lt;0&gt; but was:&lt;1&gt;" type="junit.framework.AssertionFailedError"><![CDATA[junit.framework.AssertionFailedError: PAYMENTS-Charge Type check is Failed at Account_Number(s)=ACCD101N8776123, expected:<0> but was:<1>
-	at junit.framework.Assert.fail(Assert.java:57)
-	at junit.framework.Assert.failNotEquals(Assert.java:329)
-	at junit.framework.Assert.assertEquals(Assert.java:78)
-	at junit.framework.Assert.assertEquals(Assert.java:234)
-	at exe.Arthadb_Automation.ArthaDB_ChargeType_Check_TC004(Arthadb_Automation.java:197)
-]]></failure>
-    <system-err><![CDATA[Thu Sep 28 11:31:29 IST 2017 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-]]></system-err>
-  </testcase>
-  <testcase name="ArthaDB_Invoice_Number_Check_TC005" classname="exe.Arthadb_Automation" time="0.036">
-    <failure message="PAYMENTS-Invoice Number check is Failed at Account_Number(s)=ACCD101N9990884, expected:&lt;0&gt; but was:&lt;1&gt;" type="junit.framework.AssertionFailedError"><![CDATA[junit.framework.AssertionFailedError: PAYMENTS-Invoice Number check is Failed at Account_Number(s)=ACCD101N9990884, expected:<0> but was:<1>
-	at junit.framework.Assert.fail(Assert.java:57)
-	at junit.framework.Assert.failNotEquals(Assert.java:329)
-	at junit.framework.Assert.assertEquals(Assert.java:78)
-	at junit.framework.Assert.assertEquals(Assert.java:234)
-	at exe.Arthadb_Automation.ArthaDB_Invoice_Number_Check_TC005(Arthadb_Automation.java:241)
-]]></failure>
-    <system-err><![CDATA[Thu Sep 28 11:31:29 IST 2017 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-]]></system-err>
-  </testcase>
-  <testcase name="ArthaDB_Transaction_Amount_Check_TC006" classname="exe.Arthadb_Automation" time="0.022"/>
-  <testcase name="ArthaDB_ChargeSign_Check_TC007" classname="exe.Arthadb_Automation" time="0.026">
+  <testcase name="ArthaDB_ProdCodes_Check_TC001" classname="exe.Arthadb_Automation" time="0.016"/>
+  <testcase name="ArthaDB_AuditDates_Check_TC002" classname="exe.Arthadb_Automation" time="0.005"/>
+  <testcase name="ArthaDB_Account_Number_Check_TC003" classname="exe.Arthadb_Automation" time="0.003"/>
+  <testcase name="ArthaDB_ChargeType_Check_TC004" classname="exe.Arthadb_Automation" time="0"/>
+  <testcase name="ArthaDB_Invoice_Number_Check_TC005" classname="exe.Arthadb_Automation" time="0.004"/>
+  <testcase name="ArthaDB_Transaction_Amount_Check_TC006" classname="exe.Arthadb_Automation" time="0.004"/>
+  <testcase name="ArthaDB_ChargeSign_Check_TC007" classname="exe.Arthadb_Automation" time="0.007">
     <failure message="PAYMENTS-Charge Sign Codes check is Failed at Account_Number=ACCD101N8776123, expected:&lt;0&gt; but was:&lt;1&gt;" type="junit.framework.AssertionFailedError"><![CDATA[junit.framework.AssertionFailedError: PAYMENTS-Charge Sign Codes check is Failed at Account_Number=ACCD101N8776123, expected:<0> but was:<1>
 	at junit.framework.Assert.fail(Assert.java:57)
 	at junit.framework.Assert.failNotEquals(Assert.java:329)
 	at junit.framework.Assert.assertEquals(Assert.java:78)
 	at junit.framework.Assert.assertEquals(Assert.java:234)
-	at exe.Arthadb_Automation.ArthaDB_ChargeSign_Check_TC007(Arthadb_Automation.java:330)
+	at exe.Arthadb_Automation.ArthaDB_ChargeSign_Check_TC007(Arthadb_Automation.java:319)
 ]]></failure>
-    <system-err><![CDATA[Thu Sep 28 11:31:29 IST 2017 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+    <system-err><![CDATA[Thu Sep 28 15:00:18 IST 2017 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
 ]]></system-err>
   </testcase>
-  <testcase name="ArthaDB_Record_Type_Check_TC008" classname="exe.Arthadb_Automation" time="0.033">
-    <failure message="PAYMENTS-Record Type check is Failed at Invoice_Number=J9908844423C102,J91606706e6C122, expected:&lt;0&gt; but was:&lt;2&gt;" type="junit.framework.AssertionFailedError"><![CDATA[junit.framework.AssertionFailedError: PAYMENTS-Record Type check is Failed at Invoice_Number=J9908844423C102,J91606706e6C122, expected:<0> but was:<2>
+  <testcase name="ArthaDB_Record_Type_Check_TC008" classname="exe.Arthadb_Automation" time="0.002">
+    <failure message="PAYMENTS-Record Type check is Failed at Invoice_Number=J9908844423C102,J9160067066C122,J91606706e6C122, expected:&lt;0&gt; but was:&lt;3&gt;" type="junit.framework.AssertionFailedError"><![CDATA[junit.framework.AssertionFailedError: PAYMENTS-Record Type check is Failed at Invoice_Number=J9908844423C102,J9160067066C122,J91606706e6C122, expected:<0> but was:<3>
 	at junit.framework.Assert.fail(Assert.java:57)
 	at junit.framework.Assert.failNotEquals(Assert.java:329)
 	at junit.framework.Assert.assertEquals(Assert.java:78)
 	at junit.framework.Assert.assertEquals(Assert.java:234)
-	at exe.Arthadb_Automation.ArthaDB_Record_Type_Check_TC008(Arthadb_Automation.java:374)
+	at exe.Arthadb_Automation.ArthaDB_Record_Type_Check_TC008(Arthadb_Automation.java:360)
 ]]></failure>
-    <system-err><![CDATA[Thu Sep 28 11:31:29 IST 2017 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+    <system-err><![CDATA[Thu Sep 28 15:00:18 IST 2017 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
 ]]></system-err>
   </testcase>
-  <testcase name="ArthaDB_Customer_FirstName_Check_TC009" classname="exe.Arthadb_Automation" time="0.032">
+  <testcase name="ArthaDB_Customer_FirstName_Check_TC009" classname="exe.Arthadb_Automation" time="0.004">
     <failure message="CUSTOMERS-First Name check is Failed at SSN=620-74-4374, expected:&lt;0&gt; but was:&lt;1&gt;" type="junit.framework.AssertionFailedError"><![CDATA[junit.framework.AssertionFailedError: CUSTOMERS-First Name check is Failed at SSN=620-74-4374, expected:<0> but was:<1>
 	at junit.framework.Assert.fail(Assert.java:57)
 	at junit.framework.Assert.failNotEquals(Assert.java:329)
 	at junit.framework.Assert.assertEquals(Assert.java:78)
 	at junit.framework.Assert.assertEquals(Assert.java:234)
-	at exe.Arthadb_Automation.ArthaDB_Customer_FirstName_Check_TC009(Arthadb_Automation.java:418)
+	at exe.Arthadb_Automation.ArthaDB_Customer_FirstName_Check_TC009(Arthadb_Automation.java:401)
 ]]></failure>
-    <system-err><![CDATA[Thu Sep 28 11:31:29 IST 2017 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+    <system-err><![CDATA[Thu Sep 28 15:00:18 IST 2017 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
 ]]></system-err>
   </testcase>
-  <testcase name="ArthaDB_Record_Type_Check_TC010" classname="exe.Arthadb_Automation" time="0.049">
+  <testcase name="ArthaDB_Customers_SSN_Check_TC010" classname="exe.Arthadb_Automation" time="0.007">
     <failure message="CUSTOMERS- SSN check is Failed at CustomerPK=5, expected:&lt;0&gt; but was:&lt;1&gt;" type="junit.framework.AssertionFailedError"><![CDATA[junit.framework.AssertionFailedError: CUSTOMERS- SSN check is Failed at CustomerPK=5, expected:<0> but was:<1>
 	at junit.framework.Assert.fail(Assert.java:57)
 	at junit.framework.Assert.failNotEquals(Assert.java:329)
 	at junit.framework.Assert.assertEquals(Assert.java:78)
 	at junit.framework.Assert.assertEquals(Assert.java:234)
-	at exe.Arthadb_Automation.ArthaDB_Record_Type_Check_TC010(Arthadb_Automation.java:462)
+	at exe.Arthadb_Automation.ArthaDB_Customers_SSN_Check_TC010(Arthadb_Automation.java:442)
 ]]></failure>
-    <system-err><![CDATA[Thu Sep 28 11:31:29 IST 2017 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+    <system-err><![CDATA[Thu Sep 28 15:00:19 IST 2017 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
 ]]></system-err>
   </testcase>
-  <testcase name="ArthaDB_Record_Type_Check_TC011" classname="exe.Arthadb_Automation" time="0.027">
-    <failure message="PARTNERS-Record Type check is Failed at Partner_Account_Number=15914697799,25710135206, expected:&lt;0&gt; but was:&lt;2&gt;" type="junit.framework.AssertionFailedError"><![CDATA[junit.framework.AssertionFailedError: PARTNERS-Record Type check is Failed at Partner_Account_Number=15914697799,25710135206, expected:<0> but was:<2>
-	at junit.framework.Assert.fail(Assert.java:57)
-	at junit.framework.Assert.failNotEquals(Assert.java:329)
-	at junit.framework.Assert.assertEquals(Assert.java:78)
-	at junit.framework.Assert.assertEquals(Assert.java:234)
-	at exe.Arthadb_Automation.ArthaDB_Record_Type_Check_TC011(Arthadb_Automation.java:506)
+  <testcase name="ArthaDB_Record_Type_Check_TC011" classname="exe.Arthadb_Automation" time="0.006"/>
+  <testcase name="ArthaDB_Premise_City_Check_TC012" classname="exe.Arthadb_Automation" time="0.005"/>
+  <testcase name="TestRunFinalProcess" classname="exe.ExcelRun" time="0.011">
+    <failure message="C:\Artha\ArthaDB_Automation_TestResults.xls (The process cannot access the file because it is being used by another process)" type="java.io.FileNotFoundException"><![CDATA[java.io.FileNotFoundException: C:\Artha\ArthaDB_Automation_TestResults.xls (The process cannot access the file because it is being used by another process)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at jxl.Workbook.createWorkbook(Workbook.java:301)
+	at jxl.Workbook.createWorkbook(Workbook.java:286)
+	at exe.ExcelRun.TestRunFinalProcess(ExcelRun.java:30)
 ]]></failure>
-    <system-err><![CDATA[Thu Sep 28 11:31:29 IST 2017 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-]]></system-err>
   </testcase>
-  <testcase name="ArthaDB_Premise_City_Check_TC012" classname="exe.Arthadb_Automation" time="0.023"/>
-  <testcase name="TestRunFinalProcess" classname="exe.ExcelRun" time="0.61"/>
 </testsuite>
