@@ -37,7 +37,7 @@ public class Arthadb_Automation
 	  {
 		Class.forName("com.mysql.jdbc.Driver");
 		  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql"); 
-		  stmt=con.createStatement();  
+		  stmt=con.createStatement(); 
 	  }
 	@Test(priority=1)
 	public void ArthaDB_ProdCodes_Check_TC001() throws SQLException, RowsExceededException, WriteException, IOException 
@@ -434,7 +434,7 @@ public class Arthadb_Automation
 	}
 	
 	@Test(priority=10)
-	public void ArthaDB_Record_Type_Check_TC010() throws SQLException, RowsExceededException, WriteException, IOException 
+	public void ArthaDB_Customers_SSN_Check_TC010() throws SQLException, RowsExceededException, WriteException, IOException 
 	{
 			  StringBuffer TC010r=new StringBuffer();
 				  try
@@ -566,7 +566,7 @@ public class Arthadb_Automation
 	}
 	public static int Noc;
 	@Test(priority=13)
-  public void PremisesAddressZipPlus4() throws ClassNotFoundException, SQLException 
+  public void ArthaDB_PremisesAddressZipPlus4_TC013() throws ClassNotFoundException, SQLException 
   {
 	  ResultSet rs=stmt.executeQuery("SELECT * FROM arthadb.customers where PremisesAddressZipPlus4 is null or length(PremisesAddressZipPlus4)!=5"); 
 	  List<String> Zip_RS=new ArrayList<String>();
