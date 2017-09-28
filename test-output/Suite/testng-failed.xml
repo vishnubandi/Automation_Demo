@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="exe.Arthadb_Automation">
+        <methods>
+          <include name="ArthaDB_AuditDates_Check_TC002"/>
+          <include name="ArthaDB_ChargeType_Check_TC004"/>
+          <include name="ArthaDB_Record_Type_Check_TC008"/>
+          <include name="ArthaDB_Customer_FirstName_Check_TC009"/>
+          <include name="ArthaDB_ChargeSign_Check_TC007"/>
+          <include name="ArthaDB_ProdCodes_Check_TC001"/>
+          <include name="ArthaDB_Record_Type_Check_TC011"/>
+          <include name="ArthaDB_Invoice_Number_Check_TC005"/>
+          <include name="ArthaDB_Account_Number_Check_TC003"/>
+        </methods>
+      </class> <!-- exe.Arthadb_Automation -->
+      <class name="exe.ExcelRun">
+        <methods>
+          <include name="TestRunFinalProcess"/>
+        </methods>
+      </class> <!-- exe.ExcelRun -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

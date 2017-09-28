@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="1384" started-at="2017-09-27T13:52:42Z" finished-at="2017-09-27T13:52:43Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="1384" started-at="2017-09-27T13:52:42Z" finished-at="2017-09-27T13:52:43Z">
+      <class name="exe.SampleTC">
+        <test-method status="PASS" signature="PremisesAddressZipPlus4()[pri:0, instance:exe.SampleTC@3abbfa04]" name="PremisesAddressZipPlus4" duration-ms="1337" started-at="2017-09-27T19:22:42Z" finished-at="2017-09-27T19:22:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PremisesAddressZipPlus4 -->
+      </class> <!-- exe.SampleTC -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

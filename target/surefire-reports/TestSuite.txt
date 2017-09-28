@@ -1,0 +1,76 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 13, Failures: 9, Errors: 0, Skipped: 0, Time elapsed: 4.069 sec <<< FAILURE! - in TestSuite
+ArthaDB_ProdCodes_Check_TC001(exe.Arthadb_Automation)  Time elapsed: 0.987 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: AUDIT-Product Codes check is Failed at UniqueID=J911620FS4904, expected:<0> but was:<1>
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.failNotEquals(Assert.java:329)
+	at junit.framework.Assert.assertEquals(Assert.java:78)
+	at junit.framework.Assert.assertEquals(Assert.java:234)
+	at exe.Arthadb_Automation.ArthaDB_ProdCodes_Check_TC001(Arthadb_Automation.java:65)
+
+ArthaDB_AuditDates_Check_TC002(exe.Arthadb_Automation)  Time elapsed: 0.047 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: AUDIT-Exp and Eff Date check is Failed at UniqueID=D3527056787843525678, expected:<0> but was:<1>
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.failNotEquals(Assert.java:329)
+	at junit.framework.Assert.assertEquals(Assert.java:78)
+	at junit.framework.Assert.assertEquals(Assert.java:234)
+	at exe.Arthadb_Automation.ArthaDB_AuditDates_Check_TC002(Arthadb_Automation.java:109)
+
+ArthaDB_Account_Number_Check_TC003(exe.Arthadb_Automation)  Time elapsed: 0.022 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: PAYMENTS-Account Number check is Failed at Invoice_Number=J91606706e6C122, expected:<0> but was:<1>
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.failNotEquals(Assert.java:329)
+	at junit.framework.Assert.assertEquals(Assert.java:78)
+	at junit.framework.Assert.assertEquals(Assert.java:234)
+	at exe.Arthadb_Automation.ArthaDB_Account_Number_Check_TC003(Arthadb_Automation.java:153)
+
+ArthaDB_ChargeType_Check_TC004(exe.Arthadb_Automation)  Time elapsed: 0.018 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: PAYMENTS-Charge Type check is Failed at Account_Number(s)=ACCD101N8776123, expected:<0> but was:<1>
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.failNotEquals(Assert.java:329)
+	at junit.framework.Assert.assertEquals(Assert.java:78)
+	at junit.framework.Assert.assertEquals(Assert.java:234)
+	at exe.Arthadb_Automation.ArthaDB_ChargeType_Check_TC004(Arthadb_Automation.java:197)
+
+ArthaDB_Invoice_Number_Check_TC005(exe.Arthadb_Automation)  Time elapsed: 0.015 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: PAYMENTS-Invoice Number check is Failed at Account_Number(s)=ACCD101N9990884, expected:<0> but was:<1>
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.failNotEquals(Assert.java:329)
+	at junit.framework.Assert.assertEquals(Assert.java:78)
+	at junit.framework.Assert.assertEquals(Assert.java:234)
+	at exe.Arthadb_Automation.ArthaDB_Invoice_Number_Check_TC005(Arthadb_Automation.java:241)
+
+ArthaDB_ChargeSign_Check_TC007(exe.Arthadb_Automation)  Time elapsed: 0.015 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: PAYMENTS-Charge Sign Codes check is Failed at Account_Number=ACCD101N8776123, expected:<0> but was:<1>
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.failNotEquals(Assert.java:329)
+	at junit.framework.Assert.assertEquals(Assert.java:78)
+	at junit.framework.Assert.assertEquals(Assert.java:234)
+	at exe.Arthadb_Automation.ArthaDB_ChargeSign_Check_TC007(Arthadb_Automation.java:329)
+
+ArthaDB_Record_Type_Check_TC008(exe.Arthadb_Automation)  Time elapsed: 0.022 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: PAYMENTS-Record Type check is Failed at Invoice_Number=J9908844423C102,J91606706e6C122, expected:<0> but was:<2>
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.failNotEquals(Assert.java:329)
+	at junit.framework.Assert.assertEquals(Assert.java:78)
+	at junit.framework.Assert.assertEquals(Assert.java:234)
+	at exe.Arthadb_Automation.ArthaDB_Record_Type_Check_TC008(Arthadb_Automation.java:373)
+
+ArthaDB_Customer_FirstName_Check_TC009(exe.Arthadb_Automation)  Time elapsed: 0.021 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: CUSTOMERS-First Name check is Failed at SSN=824-553-4629, expected:<0> but was:<1>
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.failNotEquals(Assert.java:329)
+	at junit.framework.Assert.assertEquals(Assert.java:78)
+	at junit.framework.Assert.assertEquals(Assert.java:234)
+	at exe.Arthadb_Automation.ArthaDB_Customer_FirstName_Check_TC009(Arthadb_Automation.java:417)
+
+ArthaDB_Record_Type_Check_TC011(exe.Arthadb_Automation)  Time elapsed: 0.023 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: PARTNERS-Record Type check is Failed at Partner_Account_Number=15914697799,25710135206, expected:<0> but was:<2>
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.failNotEquals(Assert.java:329)
+	at junit.framework.Assert.assertEquals(Assert.java:78)
+	at junit.framework.Assert.assertEquals(Assert.java:234)
+	at exe.Arthadb_Automation.ArthaDB_Record_Type_Check_TC011(Arthadb_Automation.java:508)
+
