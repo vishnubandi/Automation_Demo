@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="10" total="13" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1418" started-at="2017-09-28T07:02:37Z" finished-at="2017-09-28T07:02:38Z">
+  <suite name="Default suite" duration-ms="1556" started-at="2017-09-28T07:34:17Z" finished-at="2017-09-28T07:34:19Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1418" started-at="2017-09-28T07:02:37Z" finished-at="2017-09-28T07:02:38Z">
+    <test name="Default test" duration-ms="1556" started-at="2017-09-28T07:34:17Z" finished-at="2017-09-28T07:34:19Z">
       <class name="exe.Arthadb_Automation">
-        <test-method status="PASS" signature="DB_Details()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="DB_Details" is-config="true" duration-ms="959" started-at="2017-09-28T12:32:37Z" finished-at="2017-09-28T12:32:38Z">
+        <test-method status="PASS" signature="DB_Details()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="DB_Details" is-config="true" duration-ms="994" started-at="2017-09-28T13:04:17Z" finished-at="2017-09-28T13:04:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DB_Details -->
-        <test-method status="FAIL" signature="ArthaDB_ProdCodes_Check_TC001()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="ArthaDB_ProdCodes_Check_TC001" duration-ms="41" started-at="2017-09-28T12:32:38Z" finished-at="2017-09-28T12:32:38Z">
+        <test-method status="FAIL" signature="ArthaDB_ProdCodes_Check_TC001()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="ArthaDB_ProdCodes_Check_TC001" duration-ms="31" started-at="2017-09-28T13:04:18Z" finished-at="2017-09-28T13:04:18Z">
           <exception class="junit.framework.AssertionFailedError">
             <message>
               <![CDATA[AUDIT-Product Codes check is Failed at UniqueID=J901891D18902,J911620FS4904, expected:<0> but was:<2>]]>
@@ -53,19 +53,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ArthaDB_ProdCodes_Check_TC001 -->
-        <test-method status="PASS" signature="DB_Details()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="DB_Details" is-config="true" duration-ms="22" started-at="2017-09-28T12:32:38Z" finished-at="2017-09-28T12:32:38Z">
+        <test-method status="PASS" signature="DB_Details()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="DB_Details" is-config="true" duration-ms="16" started-at="2017-09-28T13:04:18Z" finished-at="2017-09-28T13:04:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DB_Details -->
-        <test-method status="PASS" signature="ArthaDB_AuditDates_Check_TC002()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="ArthaDB_AuditDates_Check_TC002" duration-ms="16" started-at="2017-09-28T12:32:38Z" finished-at="2017-09-28T12:32:38Z">
+        <test-method status="PASS" signature="ArthaDB_AuditDates_Check_TC002()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="ArthaDB_AuditDates_Check_TC002" duration-ms="16" started-at="2017-09-28T13:04:18Z" finished-at="2017-09-28T13:04:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ArthaDB_AuditDates_Check_TC002 -->
-        <test-method status="PASS" signature="DB_Details()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="DB_Details" is-config="true" duration-ms="17" started-at="2017-09-28T12:32:38Z" finished-at="2017-09-28T12:32:38Z">
+        <test-method status="PASS" signature="DB_Details()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="DB_Details" is-config="true" duration-ms="16" started-at="2017-09-28T13:04:18Z" finished-at="2017-09-28T13:04:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DB_Details -->
-        <test-method status="FAIL" signature="ArthaDB_Account_Number_Check_TC003()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="ArthaDB_Account_Number_Check_TC003" duration-ms="6" started-at="2017-09-28T12:32:38Z" finished-at="2017-09-28T12:32:38Z">
+        <test-method status="FAIL" signature="ArthaDB_Account_Number_Check_TC003()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="ArthaDB_Account_Number_Check_TC003" duration-ms="16" started-at="2017-09-28T13:04:18Z" finished-at="2017-09-28T13:04:18Z">
           <exception class="junit.framework.AssertionFailedError">
             <message>
               <![CDATA[PAYMENTS-Account Number check is Failed at Invoice_Number=J91606706e6C122, expected:<0> but was:<1>]]>
@@ -107,11 +107,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ArthaDB_Account_Number_Check_TC003 -->
-        <test-method status="PASS" signature="DB_Details()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="DB_Details" is-config="true" duration-ms="21" started-at="2017-09-28T12:32:38Z" finished-at="2017-09-28T12:32:38Z">
+        <test-method status="PASS" signature="DB_Details()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="DB_Details" is-config="true" duration-ms="16" started-at="2017-09-28T13:04:18Z" finished-at="2017-09-28T13:04:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DB_Details -->
-        <test-method status="FAIL" signature="ArthaDB_ChargeType_Check_TC004()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="ArthaDB_ChargeType_Check_TC004" duration-ms="15" started-at="2017-09-28T12:32:38Z" finished-at="2017-09-28T12:32:38Z">
+        <test-method status="FAIL" signature="ArthaDB_ChargeType_Check_TC004()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="ArthaDB_ChargeType_Check_TC004" duration-ms="15" started-at="2017-09-28T13:04:18Z" finished-at="2017-09-28T13:04:18Z">
           <exception class="junit.framework.AssertionFailedError">
             <message>
               <![CDATA[PAYMENTS-Charge Type check is Failed at Account_Number(s)=ACCD101N8776123, expected:<0> but was:<1>]]>
@@ -153,11 +153,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ArthaDB_ChargeType_Check_TC004 -->
-        <test-method status="PASS" signature="DB_Details()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="DB_Details" is-config="true" duration-ms="12" started-at="2017-09-28T12:32:38Z" finished-at="2017-09-28T12:32:38Z">
+        <test-method status="PASS" signature="DB_Details()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="DB_Details" is-config="true" duration-ms="16" started-at="2017-09-28T13:04:18Z" finished-at="2017-09-28T13:04:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DB_Details -->
-        <test-method status="FAIL" signature="ArthaDB_Invoice_Number_Check_TC005()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="ArthaDB_Invoice_Number_Check_TC005" duration-ms="11" started-at="2017-09-28T12:32:38Z" finished-at="2017-09-28T12:32:38Z">
+        <test-method status="FAIL" signature="ArthaDB_Invoice_Number_Check_TC005()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="ArthaDB_Invoice_Number_Check_TC005" duration-ms="16" started-at="2017-09-28T13:04:19Z" finished-at="2017-09-28T13:04:19Z">
           <exception class="junit.framework.AssertionFailedError">
             <message>
               <![CDATA[PAYMENTS-Invoice Number check is Failed at Account_Number(s)=ACCD101N9990884, expected:<0> but was:<1>]]>
@@ -199,19 +199,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ArthaDB_Invoice_Number_Check_TC005 -->
-        <test-method status="PASS" signature="DB_Details()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="DB_Details" is-config="true" duration-ms="12" started-at="2017-09-28T12:32:38Z" finished-at="2017-09-28T12:32:38Z">
+        <test-method status="PASS" signature="DB_Details()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="DB_Details" is-config="true" duration-ms="16" started-at="2017-09-28T13:04:19Z" finished-at="2017-09-28T13:04:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DB_Details -->
-        <test-method status="PASS" signature="ArthaDB_Transaction_Amount_Check_TC006()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="ArthaDB_Transaction_Amount_Check_TC006" duration-ms="4" started-at="2017-09-28T12:32:38Z" finished-at="2017-09-28T12:32:38Z">
+        <test-method status="PASS" signature="ArthaDB_Transaction_Amount_Check_TC006()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="ArthaDB_Transaction_Amount_Check_TC006" duration-ms="0" started-at="2017-09-28T13:04:19Z" finished-at="2017-09-28T13:04:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ArthaDB_Transaction_Amount_Check_TC006 -->
-        <test-method status="PASS" signature="DB_Details()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="DB_Details" is-config="true" duration-ms="11" started-at="2017-09-28T12:32:38Z" finished-at="2017-09-28T12:32:38Z">
+        <test-method status="PASS" signature="DB_Details()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="DB_Details" is-config="true" duration-ms="16" started-at="2017-09-28T13:04:19Z" finished-at="2017-09-28T13:04:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DB_Details -->
-        <test-method status="FAIL" signature="ArthaDB_ChargeSign_Check_TC007()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="ArthaDB_ChargeSign_Check_TC007" duration-ms="5" started-at="2017-09-28T12:32:38Z" finished-at="2017-09-28T12:32:38Z">
+        <test-method status="FAIL" signature="ArthaDB_ChargeSign_Check_TC007()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="ArthaDB_ChargeSign_Check_TC007" duration-ms="15" started-at="2017-09-28T13:04:19Z" finished-at="2017-09-28T13:04:19Z">
           <exception class="junit.framework.AssertionFailedError">
             <message>
               <![CDATA[PAYMENTS-Charge Sign Codes check is Failed at Account_Number=ACCD101N8776123, expected:<0> but was:<1>]]>
@@ -253,11 +253,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ArthaDB_ChargeSign_Check_TC007 -->
-        <test-method status="PASS" signature="DB_Details()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="DB_Details" is-config="true" duration-ms="13" started-at="2017-09-28T12:32:38Z" finished-at="2017-09-28T12:32:38Z">
+        <test-method status="PASS" signature="DB_Details()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="DB_Details" is-config="true" duration-ms="16" started-at="2017-09-28T13:04:19Z" finished-at="2017-09-28T13:04:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DB_Details -->
-        <test-method status="FAIL" signature="ArthaDB_Record_Type_Check_TC008()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="ArthaDB_Record_Type_Check_TC008" duration-ms="6" started-at="2017-09-28T12:32:38Z" finished-at="2017-09-28T12:32:38Z">
+        <test-method status="FAIL" signature="ArthaDB_Record_Type_Check_TC008()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="ArthaDB_Record_Type_Check_TC008" duration-ms="15" started-at="2017-09-28T13:04:19Z" finished-at="2017-09-28T13:04:19Z">
           <exception class="junit.framework.AssertionFailedError">
             <message>
               <![CDATA[PAYMENTS-Record Type check is Failed at Invoice_Number=J9908844423C102,J91606706e6C122, expected:<0> but was:<2>]]>
@@ -299,11 +299,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ArthaDB_Record_Type_Check_TC008 -->
-        <test-method status="PASS" signature="DB_Details()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="DB_Details" is-config="true" duration-ms="11" started-at="2017-09-28T12:32:38Z" finished-at="2017-09-28T12:32:38Z">
+        <test-method status="PASS" signature="DB_Details()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="DB_Details" is-config="true" duration-ms="16" started-at="2017-09-28T13:04:19Z" finished-at="2017-09-28T13:04:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DB_Details -->
-        <test-method status="FAIL" signature="ArthaDB_Customer_FirstName_Check_TC009()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="ArthaDB_Customer_FirstName_Check_TC009" duration-ms="10" started-at="2017-09-28T12:32:38Z" finished-at="2017-09-28T12:32:38Z">
+        <test-method status="FAIL" signature="ArthaDB_Customer_FirstName_Check_TC009()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="ArthaDB_Customer_FirstName_Check_TC009" duration-ms="15" started-at="2017-09-28T13:04:19Z" finished-at="2017-09-28T13:04:19Z">
           <exception class="junit.framework.AssertionFailedError">
             <message>
               <![CDATA[CUSTOMERS-First Name check is Failed at SSN=620-74-4374, expected:<0> but was:<1>]]>
@@ -345,11 +345,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ArthaDB_Customer_FirstName_Check_TC009 -->
-        <test-method status="PASS" signature="DB_Details()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="DB_Details" is-config="true" duration-ms="13" started-at="2017-09-28T12:32:38Z" finished-at="2017-09-28T12:32:38Z">
+        <test-method status="PASS" signature="DB_Details()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="DB_Details" is-config="true" duration-ms="16" started-at="2017-09-28T13:04:19Z" finished-at="2017-09-28T13:04:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DB_Details -->
-        <test-method status="FAIL" signature="ArthaDB_Record_Type_Check_TC010()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="ArthaDB_Record_Type_Check_TC010" duration-ms="11" started-at="2017-09-28T12:32:38Z" finished-at="2017-09-28T12:32:38Z">
+        <test-method status="FAIL" signature="ArthaDB_Customers_SSN_Check_TC010()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="ArthaDB_Customers_SSN_Check_TC010" duration-ms="16" started-at="2017-09-28T13:04:19Z" finished-at="2017-09-28T13:04:19Z">
           <exception class="junit.framework.AssertionFailedError">
             <message>
               <![CDATA[CUSTOMERS- SSN check is Failed at CustomerPK=5, expected:<0> but was:<1>]]>
@@ -360,7 +360,7 @@
 	at junit.framework.Assert.failNotEquals(Assert.java:329)
 	at junit.framework.Assert.assertEquals(Assert.java:78)
 	at junit.framework.Assert.assertEquals(Assert.java:234)
-	at exe.Arthadb_Automation.ArthaDB_Record_Type_Check_TC010(Arthadb_Automation.java:471)
+	at exe.Arthadb_Automation.ArthaDB_Customers_SSN_Check_TC010(Arthadb_Automation.java:471)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -390,12 +390,12 @@
           </exception> <!-- junit.framework.AssertionFailedError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ArthaDB_Record_Type_Check_TC010 -->
-        <test-method status="PASS" signature="DB_Details()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="DB_Details" is-config="true" duration-ms="10" started-at="2017-09-28T12:32:38Z" finished-at="2017-09-28T12:32:38Z">
+        </test-method> <!-- ArthaDB_Customers_SSN_Check_TC010 -->
+        <test-method status="PASS" signature="DB_Details()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="DB_Details" is-config="true" duration-ms="16" started-at="2017-09-28T13:04:19Z" finished-at="2017-09-28T13:04:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DB_Details -->
-        <test-method status="FAIL" signature="ArthaDB_Record_Type_Check_TC011()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="ArthaDB_Record_Type_Check_TC011" duration-ms="14" started-at="2017-09-28T12:32:38Z" finished-at="2017-09-28T12:32:38Z">
+        <test-method status="FAIL" signature="ArthaDB_Record_Type_Check_TC011()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="ArthaDB_Record_Type_Check_TC011" duration-ms="0" started-at="2017-09-28T13:04:19Z" finished-at="2017-09-28T13:04:19Z">
           <exception class="junit.framework.AssertionFailedError">
             <message>
               <![CDATA[PARTNERS-Record Type check is Failed at Partner_Account_Number=15914697799,25710135206, expected:<0> but was:<2>]]>
@@ -437,30 +437,32 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ArthaDB_Record_Type_Check_TC011 -->
-        <test-method status="PASS" signature="DB_Details()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="DB_Details" is-config="true" duration-ms="11" started-at="2017-09-28T12:32:38Z" finished-at="2017-09-28T12:32:38Z">
+        <test-method status="PASS" signature="DB_Details()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="DB_Details" is-config="true" duration-ms="16" started-at="2017-09-28T13:04:19Z" finished-at="2017-09-28T13:04:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DB_Details -->
-        <test-method status="PASS" signature="ArthaDB_Premise_City_Check_TC012()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="ArthaDB_Premise_City_Check_TC012" duration-ms="14" started-at="2017-09-28T12:32:38Z" finished-at="2017-09-28T12:32:38Z">
+        <test-method status="PASS" signature="ArthaDB_Premise_City_Check_TC012()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="ArthaDB_Premise_City_Check_TC012" duration-ms="16" started-at="2017-09-28T13:04:19Z" finished-at="2017-09-28T13:04:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ArthaDB_Premise_City_Check_TC012 -->
-        <test-method status="PASS" signature="DB_Details()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="DB_Details" is-config="true" duration-ms="15" started-at="2017-09-28T12:32:38Z" finished-at="2017-09-28T12:32:38Z">
+        <test-method status="PASS" signature="DB_Details()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="DB_Details" is-config="true" duration-ms="15" started-at="2017-09-28T13:04:19Z" finished-at="2017-09-28T13:04:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DB_Details -->
-        <test-method status="FAIL" signature="PremisesAddressZipPlus4()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="PremisesAddressZipPlus4" duration-ms="5" started-at="2017-09-28T12:32:38Z" finished-at="2017-09-28T12:32:38Z">
-          <exception class="junit.framework.AssertionFailedError">
+        <test-method status="FAIL" signature="ArthaDB_MailingAddressZipCode_TC013()[pri:0, instance:exe.Arthadb_Automation@31a5c39e]" name="ArthaDB_MailingAddressZipCode_TC013" duration-ms="32" started-at="2017-09-28T13:04:19Z" finished-at="2017-09-28T13:04:19Z">
+          <exception class="java.sql.SQLSyntaxErrorException">
             <message>
-              <![CDATA[CUSTOMER - PremisesAddressZipPlus4 check is Failed at SSN=563-13-3480,405-05-7405,348-37-6100, expected:<0> but was:<3>]]>
+              <![CDATA[Unknown column 'PremisesAddressZipPlus4' in 'where clause']]>
             </message>
             <full-stacktrace>
-              <![CDATA[junit.framework.AssertionFailedError: CUSTOMER - PremisesAddressZipPlus4 check is Failed at SSN=563-13-3480,405-05-7405,348-37-6100, expected:<0> but was:<3>
-	at junit.framework.Assert.fail(Assert.java:57)
-	at junit.framework.Assert.failNotEquals(Assert.java:329)
-	at junit.framework.Assert.assertEquals(Assert.java:78)
-	at junit.framework.Assert.assertEquals(Assert.java:234)
-	at exe.Arthadb_Automation.PremisesAddressZipPlus4(Arthadb_Automation.java:589)
+              <![CDATA[java.sql.SQLSyntaxErrorException: Unknown column 'PremisesAddressZipPlus4' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:536)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:513)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:115)
+	at com.mysql.cj.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:1983)
+	at com.mysql.cj.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:1936)
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1422)
+	at exe.Arthadb_Automation.ArthaDB_MailingAddressZipCode_TC013(Arthadb_Automation.java:571)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -487,10 +489,10 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
 ]]>
             </full-stacktrace>
-          </exception> <!-- junit.framework.AssertionFailedError -->
+          </exception> <!-- java.sql.SQLSyntaxErrorException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PremisesAddressZipPlus4 -->
+        </test-method> <!-- ArthaDB_MailingAddressZipCode_TC013 -->
       </class> <!-- exe.Arthadb_Automation -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
