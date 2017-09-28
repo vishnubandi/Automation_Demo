@@ -32,6 +32,7 @@ public class Arthadb_Automation
 	public static int TC001c,TC001RecCount,TC002c,TC002RecCount,TC003c,TC003RecCount,TC004c,TC004RecCount,TC005c,TC005RecCount,TC006c,TC006RecCount,TC007c,TC007RecCount,TC008c,TC008RecCount,TC009c,TC009RecCount,TC010c,TC010RecCount,TC011c,TC011RecCount,TC012c,TC012RecCount;
 	Connection con;
 	Statement stmt;
+	public static int Noc;
 	@BeforeMethod
 	public void DB_Details() throws ClassNotFoundException, SQLException 
 	  {
@@ -45,9 +46,6 @@ public class Arthadb_Automation
 		 StringBuffer TC001r=new StringBuffer();
 		  try
 		  {
-//			  Class.forName("com.mysql.jdbc.Driver");
-//			  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql");   
-//			  Statement stmt=con.createStatement();  
 			  ResultSet rs=stmt.executeQuery("SELECT * FROM arthadb.audit where ProdCodes is null"); 
 			  List<String> TC001rs=new ArrayList<String>();
 			  while (rs.next()) 
@@ -85,9 +83,6 @@ public class Arthadb_Automation
 		 StringBuffer TC002r=new StringBuffer();
 		  try
 		  {
-//			  Class.forName("com.mysql.jdbc.Driver");
-//			  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql");   
-//			  Statement stmt=con.createStatement();  
 			  ResultSet rs=stmt.executeQuery("SELECT *FROM arthadb.audit where datediff(ExpDate,EffDate)<0"); 
 			  List<String> TC002rs=new ArrayList<String>();
 			  while (rs.next()) 
@@ -128,10 +123,7 @@ public class Arthadb_Automation
 	{
 		 StringBuffer TC003r=new StringBuffer();
 		  try
-		  {
-//			  Class.forName("com.mysql.jdbc.Driver");
-//			  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql");   
-//			  Statement stmt=con.createStatement();  
+		  { 
 			  ResultSet rs=stmt.executeQuery("SELECT * FROM arthadb.payments where Account_Number like '0%'"); 
 			  List<String> TC003rs=new ArrayList<String>();
 			  while (rs.next()) 
@@ -172,10 +164,7 @@ public class Arthadb_Automation
 	{
 			  	StringBuffer TC004r=new StringBuffer();
 				  try
-				  {
-//					  Class.forName("com.mysql.jdbc.Driver");
-//					  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql");   
-//					  Statement stmt=con.createStatement();  
+				  {  
 					  ResultSet rs=stmt.executeQuery("SELECT * fROM arthadb.payments where ChargeType not in('J','N')"); 
 					  List<String> TC004rs=new ArrayList<String>();
 					  while (rs.next()) 
@@ -217,9 +206,6 @@ public class Arthadb_Automation
 			  StringBuffer TC005r=new StringBuffer();
 				  try
 				  {
-//					  Class.forName("com.mysql.jdbc.Driver");
-//					  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql");   
-//					  Statement stmt=con.createStatement();  
 					  ResultSet rs=stmt.executeQuery("SELECT *  FROM arthadb.payments where Invoice_Number like '0%'"); 
 					  List<String> TC005rs=new ArrayList<String>();
 					  while (rs.next()) 
@@ -261,9 +247,6 @@ public class Arthadb_Automation
 			  StringBuffer TC006r=new StringBuffer();
 				  try
 				  {
-//					  Class.forName("com.mysql.jdbc.Driver");
-//					  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql");   
-//					  Statement stmt=con.createStatement();  
 					  ResultSet rs=stmt.executeQuery("SELECT * from arthadb.payments where Transaction_Amount=0"); 
 					  List<String> TC006rs=new ArrayList<String>();
 					  while (rs.next()) 
@@ -306,9 +289,6 @@ public class Arthadb_Automation
 			  StringBuffer TC007r=new StringBuffer();
 				  try
 				  {
-//					  Class.forName("com.mysql.jdbc.Driver");
-//					  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql");   
-//					  Statement stmt=con.createStatement();  
 					  ResultSet rs=stmt.executeQuery("SELECT * from arthadb.payments where ChargeType='N' and ChargeSign!='D' and ChargeSign in('C','D')"); 
 					  List<String> TC007rs=new ArrayList<String>();
 					  while (rs.next()) 
@@ -349,10 +329,7 @@ public class Arthadb_Automation
 	{
 			  StringBuffer TC008r=new StringBuffer();
 				  try
-				  {
-//					  Class.forName("com.mysql.jdbc.Driver");
-//					  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql");   
-//					  Statement stmt=con.createStatement();  
+				  { 
 					  ResultSet rs=stmt.executeQuery("SELECT * FROM arthadb.payments where (ChargeType='N' and ChargeSign='D' and Record_Type!='Debit_R5') or (ChargeType='J' and ChargeSign='D' and Record_Type!='Debit_R6') or (ChargeType='J' and ChargeSign='C' and Record_Type!='Credit_R5')"); 
 					  List<String> TC008rs=new ArrayList<String>();
 					  while (rs.next()) 
@@ -394,10 +371,7 @@ public class Arthadb_Automation
 	{
 			  StringBuffer TC009r=new StringBuffer();
 				  try
-				  {
-//					  Class.forName("com.mysql.jdbc.Driver");
-//					  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql");   
-//					  Statement stmt=con.createStatement();  
+				  { 
 					  ResultSet rs=stmt.executeQuery("SELECT * FROM arthadb.customers where FirstName is null"); 
 					  List<String> TC009rs=new ArrayList<String>();
 					  while (rs.next()) 
@@ -438,10 +412,7 @@ public class Arthadb_Automation
 	{
 			  StringBuffer TC010r=new StringBuffer();
 				  try
-				  {
-//					  Class.forName("com.mysql.jdbc.Driver");
-//					  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql");   
-//					  Statement stmt=con.createStatement();  
+				  { 
 					  ResultSet rs=stmt.executeQuery("SELECT * FROM arthadb.customers where SSN is null or length(SSN)!=11"); 
 					  List<String> TC010rs=new ArrayList<String>();
 					  while (rs.next()) 
@@ -483,9 +454,6 @@ public class Arthadb_Automation
 			  StringBuffer TC011r=new StringBuffer();
 				  try
 				  {
-//					  Class.forName("com.mysql.jdbc.Driver");
-//					  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql");   
-//					  Statement stmt=con.createStatement();  
 					  ResultSet rs=stmt.executeQuery("SELECT * FROM arthadb.partners where Record_Type is null"); 
 					  List<String> TC011rs=new ArrayList<String>();
 					  while (rs.next()) 
@@ -527,9 +495,6 @@ public class Arthadb_Automation
 			  StringBuffer TC012r=new StringBuffer();
 				  try
 				  {
-//					  Class.forName("com.mysql.jdbc.Driver");
-//					  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql");   
-//					  Statement stmt=con.createStatement();  
 					  ResultSet rs=stmt.executeQuery("SELECT * FROM arthadb.partners where (Premise_City is null or Premise_City=' ' or Premise_City='')"); 
 					  List<String> TC012rs=new ArrayList<String>();
 					  while (rs.next()) 
@@ -564,29 +529,4 @@ public class Arthadb_Automation
 						  e1.printStackTrace();
 				  } 
 	}
-	public static int Noc;
-	@Test(priority=13)
-  public void ArthaDB_MailingAddressZipCode_TC013() throws ClassNotFoundException, SQLException 
-  {
-	  ResultSet rs=stmt.executeQuery("SELECT * FROM arthadb.customers where MailingAddressZipCode is null or length(PremisesAddressZipPlus4)!=5"); 
-	  List<String> Zip_RS=new ArrayList<String>();
-	  while (rs.next()) 
-	  {
-		  Noc=rs.getRow();
-		  Zip_RS.add(rs.getString("SSN"));
-	  }
-	  if(Noc==0)
-	  {
-		  Assert.assertEquals("CUSTOMER - MailingAddressZipCode check is PASSED", 0, Noc);
-	  }
-	  else
-	  {
-		  StringBuffer Zip_R=new StringBuffer();
-		  for(int k=0;k<Zip_RS.size();k++)
-		  {
-			  Zip_R.append(Zip_RS.get(k)+","); 
-		  }
-		  Assert.assertEquals("CUSTOMER - MailingAddressZipCode check is Failed at SSN="+Zip_R, 0, Noc);
-	  }
-  }
 }
