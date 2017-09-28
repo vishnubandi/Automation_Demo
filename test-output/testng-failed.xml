@@ -13,11 +13,6 @@
           <include name="DB_Details"/>
         </methods>
       </class> <!-- exe.Arthadb_Automation -->
-      <class name="exe.ExcelRun">
-        <methods>
-          <include name="TestRunFinalProcess"/>
-        </methods>
-      </class> <!-- exe.ExcelRun -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
