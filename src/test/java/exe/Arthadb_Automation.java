@@ -1,5 +1,13 @@
+    /* 
+    	Author: Artha Data Solutions Testing Team
+    	Date: 2017-10-04
+    	Description: This code Will Automate 13 Test cases  for Customer, Audit, Payment & Partners
+    */
+
+//Package Statement
 package exe;
 
+// Import statement for Files, Excel, Mysql & TestNG
 import java.io.File;
 import java.io.IOException;
 import java.sql.Connection;
@@ -26,6 +34,7 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 
+//Class Declaration 
 public class Arthadb_Automation 
 {
 	public static String TC001Result,TC001Rec,TC002Result,TC002Rec,TC003Result,TC003Rec,TC004Result,TC004Rec,TC005Result,TC005Rec,TC006Result,TC006Rec,TC007Result,TC007Rec,TC008Result,TC008Rec,TC009Result,TC009Rec,TC010Result,TC010Rec,TC011Result,TC011Rec,TC012Result,TC012Rec;
@@ -33,6 +42,8 @@ public class Arthadb_Automation
 	Connection con;
 	Statement stmt;
 	public static int Noc;
+	
+	//Database Connection Statement
 	@BeforeMethod
 	public void DB_Details() throws ClassNotFoundException, SQLException 
 	  {
@@ -40,6 +51,8 @@ public class Arthadb_Automation
 		  con=DriverManager.getConnection("jdbc:mysql://localhost:3307/arthadb","root","mysql"); 
 		  stmt=con.createStatement(); 
 	  }
+	
+	//ProdCodes_Check Test Script
 	@Test(priority=1)
 	public void ArthaDB_ProdCodes_Check_TC001() throws SQLException, RowsExceededException, WriteException, IOException 
 	  {
@@ -77,6 +90,8 @@ public class Arthadb_Automation
 				  e1.printStackTrace();
 		  } 
 	}
+	
+	//AuditDates_Check Test Script
 	@Test(priority=2)
 	public void ArthaDB_AuditDates_Check_TC002() throws SQLException, RowsExceededException, WriteException, IOException 
 	{
@@ -118,6 +133,8 @@ public class Arthadb_Automation
 				  e1.printStackTrace();
 		  } 
 	}
+	
+	//Account_Number_Check Test Script
 	@Test(priority=3)
 	public void ArthaDB_Account_Number_Check_TC003() throws SQLException, RowsExceededException, WriteException, IOException 
 	{
@@ -159,6 +176,8 @@ public class Arthadb_Automation
 				  e1.printStackTrace();
 		  } 
 	}
+	
+	//ChargeType_Check Test Script
 	@Test(priority=4)
 	public void ArthaDB_ChargeType_Check_TC004() throws SQLException, RowsExceededException, WriteException, IOException 
 	{
@@ -200,6 +219,8 @@ public class Arthadb_Automation
 						  e1.printStackTrace();
 				  } 
 	}
+
+	//Invoice_Number_Check Test Script
 	@Test(priority=5)
 	public void ArthaDB_Invoice_Number_Check_TC005() throws SQLException, RowsExceededException, WriteException, IOException 
 	{
@@ -241,6 +262,8 @@ public class Arthadb_Automation
 						  e1.printStackTrace();
 				  } 
 	}
+	
+	//Transaction_Amount_Check Test Script
 	@Test(priority=6)
 	public void ArthaDB_Transaction_Amount_Check_TC006() throws SQLException, RowsExceededException, WriteException, IOException 
 	{
@@ -283,6 +306,7 @@ public class Arthadb_Automation
 				  } 
 	}
 	
+	//ChargeSign_Check Test Script	
 	@Test(priority=7)
 	public void ArthaDB_ChargeSign_Check_TC007() throws SQLException, RowsExceededException, WriteException, IOException 
 	{
@@ -324,6 +348,8 @@ public class Arthadb_Automation
 						  e1.printStackTrace();
 				  } 
 	}
+	
+	//Record_Type_Check Test Script
 	@Test(priority=8)
 	public void ArthaDB_Record_Type_Check_TC008() throws SQLException, RowsExceededException, WriteException, IOException 
 	{
@@ -366,6 +392,7 @@ public class Arthadb_Automation
 				  } 
 	}
 
+	//Customer_FirstName_Check Test Script
 	@Test(priority=9)
 	public void ArthaDB_Customer_FirstName_Check_TC009() throws SQLException, RowsExceededException, WriteException, IOException 
 	{
@@ -407,6 +434,7 @@ public class Arthadb_Automation
 				  } 
 	}
 	
+	//Customer_SSN_Check Test Script
 	@Test(priority=10)
 	public void ArthaDB_Customers_SSN_Check_TC010() throws SQLException, RowsExceededException, WriteException, IOException 
 	{
@@ -448,6 +476,7 @@ public class Arthadb_Automation
 				  } 
 	}
 	
+	//Customer_Record_Type_Check Test Script
 	@Test(priority=11)
 	public void ArthaDB_Record_Type_Check_TC011() throws SQLException, RowsExceededException, WriteException, IOException 
 	{
@@ -489,6 +518,7 @@ public class Arthadb_Automation
 				  } 
 	}
 	
+	//Customer_Premise_City_Check Test Script
 	@Test(priority=12)
 	public void ArthaDB_Premise_City_Check_TC012() throws SQLException, RowsExceededException, WriteException, IOException 
 	{
@@ -529,4 +559,30 @@ public class Arthadb_Automation
 						  e1.printStackTrace();
 				  } 
 	} 
+	
+	//Customer_PrimaryPhoneNumber_Check Test Script
+	@Test(priority=13)
+	public void ArthaDB_PrimaryPhoneNumber_TC013() throws SQLException
+	{
+		ResultSet rs=stmt.executeQuery("SELECT * FROM arthadb.customers where PrimaryPhoneNumber is null");
+		List<String> Phone_rs=new ArrayList<String>();
+		while(rs.next())
+		{
+			Noc=rs.getRow();
+			Phone_rs.add(rs.getString("SSN"));
+		}
+		if(Noc==0)
+		{
+			Assert.assertEquals("Customer - PrimaryPhoneNumber check is Passed",0,Noc);
+		}
+		else
+		{
+			StringBuffer Phone_r=new StringBuffer();
+			for(int k=0;k<Phone_rs.size();k++)
+			{
+				Phone_r.append(Phone_rs.get(k)+",");
+			}
+			Assert.assertEquals("Customer - PrimaryPhoneNumber check is Failed at SSN="+Phone_r, 0, Noc);
+		}
+	}
 }
