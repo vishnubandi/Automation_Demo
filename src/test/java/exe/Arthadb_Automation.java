@@ -539,7 +539,7 @@ public class Arthadb_Automation
 			Assert.assertEquals("Customer - Details are updated at Customer SSN= "+Update_r, 0, Noc);
 		}
 	}
-	//Customer_Details_Insert_Check Test Script
+/*	//Customer_Details_Insert_Check Test Script
 	@Test(priority=15)
 	public void ArthaDB_Customer_Details_Insert_Check_TC015() throws SQLException
 	{
@@ -564,5 +564,5 @@ public class Arthadb_Automation
 			}
 			Assert.assertEquals("Customer - Details are Inserted at Customer ID= "+Update_r, 0, Noc);
 		}
-	}
+	}*/
 }
