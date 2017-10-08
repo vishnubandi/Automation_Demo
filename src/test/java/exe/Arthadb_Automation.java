@@ -394,12 +394,12 @@ public class Arthadb_Automation
 
 	//Customer_FirstName_Check Test Script
 	@Test(priority=9)
-	public void ArthaDB_Customer_FirstName_Check_TC009() throws SQLException, RowsExceededException, WriteException, IOException 
+	public void ArthaDB_Customer_First_Last_Name_Check_TC009() throws SQLException, RowsExceededException, WriteException, IOException 
 	{
 			  StringBuffer TC009r=new StringBuffer();
 				  try
 				  { 
-					  ResultSet rs=stmt.executeQuery("SELECT * FROM arthadb.customers where FirstName is null"); 
+					  ResultSet rs=stmt.executeQuery("SELECT * FROM customers WHERE FirstName RLIKE '[[:<:]][a-z][[:>:]]' or LastName RLIKE '[[:<:]][a-z][[:>:]]' or FirstName is null or LastName is null"); 
 					  List<String> TC009rs=new ArrayList<String>();
 					  while (rs.next()) 
 					  {
@@ -409,9 +409,9 @@ public class Arthadb_Automation
 					  }
 					  if(TC009c==0)
 						  {
-						  	TC009Rec="CUSTOMERS-First Name check is PASSED";
+						  	TC009Rec="CUSTOMERS-First & Lst Name check is PASSED";
 					        TC009Result="PASS";
-					        Assert.assertEquals("CUSTOMERS-First Name check is PASSED", 0, TC009c);
+					        Assert.assertEquals("CUSTOMERS-First & Last Name check is PASSED", 0, TC009c);
 					        
 						  }
 						  else
@@ -422,10 +422,10 @@ public class Arthadb_Automation
 									  
 								}
 								
-								TC009Rec="CUSTOMERS-First Name Check is Failed at SSN="+TC009r;
+								TC009Rec="CUSTOMERS-First  & Lst Name Check is Failed at SSN="+TC009r;
 						        TC009RecCount=TC009rs.size();
 						        TC009Result="FAIL";
-						        Assert.assertEquals("CUSTOMERS-First Name check is Failed at SSN="+TC009r, 0, TC009c);
+						        Assert.assertEquals("CUSTOMERS-First & Last Name check is Failed at SSN="+TC009r, 0, TC009c);
 						  }  
 				  }
 				  catch (Exception e1) 
@@ -441,7 +441,7 @@ public class Arthadb_Automation
 			  StringBuffer TC010r=new StringBuffer();
 				  try
 				  { 
-					  ResultSet rs=stmt.executeQuery("SELECT * FROM arthadb.customers where SSN is null or length(SSN)!=11"); 
+					  ResultSet rs=stmt.executeQuery("SELECT * FROM arthadb.customers where SSN is null or length(SSN)!=10"); 
 					  List<String> TC010rs=new ArrayList<String>();
 					  while (rs.next()) 
 					  {
@@ -585,4 +585,56 @@ public class Arthadb_Automation
 			Assert.assertEquals("Customer - PrimaryPhoneNumber check is Failed at SSN="+Phone_r, 0, Noc);
 		}
 	}
+	//Customer_Details_Update_Check Test Script
+			@Test(priority=14)
+			public void ArthaDB_Customer_Details_Update_Check_TC014() throws SQLException
+			{
+				int NocI=0;
+				ResultSet rs=stmt.executeQuery("SELECT * FROM arthadb.customers_audit_table where action='Update'");
+				List<String> Update_rs=new ArrayList<String>();
+				while(rs.next())
+				{
+					Noc=rs.getRow();
+					Update_rs.add(rs.getString("SSN"));
+				}
+				if(Noc==0)
+				{
+					Assert.assertEquals("Customer - Details check is Passed",0,Noc);
+				}
+				else
+				{
+					StringBuffer Update_r=new StringBuffer();
+					for(int k=0;k<Update_rs.size();k++)
+					{
+						Update_r.append(Update_rs.get(k)+",");
+					}
+					Assert.assertEquals("Customer - Details are updated at Customer SSN= "+Update_r, 0, Noc);
+				}
+			}
+		//Customer_Details_Insert_Check Test Script
+			@Test(priority=15)
+			public void ArthaDB_Customer_Details_Insert_Check_TC015() throws SQLException
+			{
+				int NocI=0;
+				ResultSet rs=stmt.executeQuery("SELECT max(CAT_ID), max(ID) as ID FROM arthadb.customers_audit_table where action='Insert' group by action");
+				List<String> Update_rs=new ArrayList<String>();
+				while(rs.next())
+				{
+					Noc=rs.getRow();
+					Update_rs.add(rs.getString("ID"));
+				}
+				if(Noc==0)
+				{
+					Assert.assertEquals("Customer - Details check is Passed",0,Noc);
+				}
+				else
+				{
+					StringBuffer Update_r=new StringBuffer();
+					for(int k=0;k<Update_rs.size();k++)
+					{
+						Update_r.append(Update_rs.get(k)+",");
+					}
+					Assert.assertEquals("Customer - Details are Inserted at Customer ID= "+Update_r, 0, Noc);
+				}
+			}
 }
