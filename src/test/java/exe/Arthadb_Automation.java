@@ -50,7 +50,7 @@ public class Arthadb_Automation
 		  stmt=con.createStatement(); 
 	  }
 	
-	//ProdCodes_Check Test Script
+	//Audit ProdCodes_Check Test Script
 	@Test(priority=1)
 	public void ArthaDB_ProdCodes_Check_TC001() throws SQLException, RowsExceededException, WriteException, IOException 
 	  {
@@ -84,7 +84,7 @@ public class Arthadb_Automation
 		  } 
 	}
 	
-	//AuditDates_Check Test Script
+	//Audit Dates_Check Test Script
 	@Test(priority=2)
 	public void ArthaDB_AuditDates_Check_TC002() throws SQLException, RowsExceededException, WriteException, IOException 
 	{
@@ -121,7 +121,7 @@ public class Arthadb_Automation
 		  } 
 	}
 	
-	//Account_Number_Check Test Script
+	//payments Account_Number_Check Test Script
 	@Test(priority=3)
 	public void ArthaDB_Account_Number_Check_TC003() throws SQLException, RowsExceededException, WriteException, IOException 
 	{
@@ -158,7 +158,7 @@ public class Arthadb_Automation
 		  } 
 	}
 
-	//ChargeType_Check Test Script
+	//payments ChargeType_Check Test Script
 	@Test(priority=4)
 	public void ArthaDB_ChargeType_Check_TC004() throws SQLException, RowsExceededException, WriteException, IOException 
 	{
@@ -195,7 +195,7 @@ public class Arthadb_Automation
 				  } 
 	}
 
-	//Invoice_Number_Check Test Script
+	//payments Invoice_Number_Check Test Script
 	@Test(priority=5)
 	public void ArthaDB_Invoice_Number_Check_TC005() throws SQLException, RowsExceededException, WriteException, IOException 
 	{
@@ -233,7 +233,7 @@ public class Arthadb_Automation
 				  } 
 	}
 	
-	//Transaction_Amount_Check Test Script
+	//payments Transaction_Amount_Check Test Script
 	@Test(priority=6)
 	public void ArthaDB_Transaction_Amount_Check_TC006() throws SQLException, RowsExceededException, WriteException, IOException 
 	{
@@ -270,7 +270,7 @@ public class Arthadb_Automation
 				  } 
 	}
 	
-	//ChargeSign_Check Test Script	
+	//payments ChargeSign_Check Test Script	
 	@Test(priority=7)
 	public void ArthaDB_ChargeSign_Check_TC007() throws SQLException, RowsExceededException, WriteException, IOException 
 	{
@@ -306,7 +306,7 @@ public class Arthadb_Automation
 				  } 
 	}
 	
-	//Record_Type_Check Test Script
+	//payments Record_Type_Check Test Script
 	@Test(priority=8)
 	public void ArthaDB_Record_Type_Check_TC008() throws SQLException, RowsExceededException, WriteException, IOException 
 	{
@@ -341,81 +341,10 @@ public class Arthadb_Automation
 						  e1.printStackTrace();
 				  } 
 	}
-
-	//Customer_FirstName_Check Test Script
+	
+	//Partners Record_Type_Check Test Script
 	@Test(priority=9)
-	public void ArthaDB_Customer_First_Last_Name_Check_TC009() throws SQLException, RowsExceededException, WriteException, IOException 
-	{
-			  StringBuffer TC009r=new StringBuffer();
-				  try
-				  { 
-					  int Noc=0; 
-					  ResultSet rs=stmt.executeQuery("SELECT * FROM customers WHERE FirstName RLIKE '[[:<:]][a-z][[:>:]]' or LastName RLIKE '[[:<:]][a-z][[:>:]]' or FirstName is null or LastName is null"); 
-					  List<String> TC009rs=new ArrayList<String>();
-					  while (rs.next()) 
-					  {
-						  Noc=rs.getRow();
-						  TC009rs.add(rs.getString("SSN"));
-						  
-					  }
-					  if(Noc==0)
-						  {
-					        Assert.assertEquals("CUSTOMERS-First & Last Name check is PASSED", 0, Noc);
-						  }
-						  else
-						  {
-								for(int i=0;i<TC009rs.size();i++)
-								{
-									  TC009r.append(TC009rs.get(i)+","); 	  
-								}
-						        Assert.assertEquals("CUSTOMERS-First & Last Name check is Failed at SSN="+TC009r, 0, Noc);
-						  }  
-				  }
-				  catch (Exception e1) 
-				  {
-						  e1.printStackTrace();
-				  } 
-	}
-	
-	//Customer_SSN_Check Test Script
-	@Test(priority=10)
-	public void ArthaDB_Customers_SSN_Check_TC010() throws SQLException, RowsExceededException, WriteException, IOException 
-	{
-			 StringBuffer TC010r=new StringBuffer();
-				  try
-				  { 
-					  int Noc=0; 
-					  ResultSet rs=stmt.executeQuery("SELECT * FROM customers WHERE SSN not RLIKE '[[:<:]][0-9]{3}[[:>:]](-)[[:<:]][0-9]{2}[[:>:]](-)[[:<:]][0-9]{4}[[:>:]]' or SSN is null"); 
-					  List<String> TC010rs=new ArrayList<String>();
-					  while (rs.next()) 
-					  {
-						  Noc=rs.getRow();
-						  TC010rs.add(rs.getString("CustomerPK"));
-						  
-					  }
-					  if(Noc==0)
-						  {
-					        Assert.assertEquals("CUSTOMERS- SSN check is PASSED", 0, Noc);
-					        
-						  }
-						  else
-						  {
-								for(int i=0;i<TC010rs.size();i++)
-								{
-									  TC010r.append(TC010rs.get(i)+","); 
-								}
-						        Assert.assertEquals("CUSTOMERS- SSN check is Failed at CustomerPK="+TC010r, 0, Noc);
-						  }  
-				  }
-				  catch (Exception e1) 
-				  {
-						  e1.printStackTrace();
-				  } 
-	}
-	
-	//Customer_Record_Type_Check Test Script
-	@Test(priority=11)
-	public void ArthaDB_Record_Type_Check_TC011() throws SQLException, RowsExceededException, WriteException, IOException 
+	public void ArthaDB_Record_Type_Check_TC009() throws SQLException, RowsExceededException, WriteException, IOException 
 	{
 			  StringBuffer TC011r=new StringBuffer();
 				  try
@@ -450,9 +379,9 @@ public class Arthadb_Automation
 				  } 
 	}
 	
-	//Customer_Premise_City_Check Test Script
-	@Test(priority=12)
-	public void ArthaDB_Premise_City_Check_TC012() throws SQLException, RowsExceededException, WriteException, IOException 
+	//Partners Premise_City_Check Test Script
+	@Test(priority=10)
+	public void ArthaDB_Premise_City_Check_TC010() throws SQLException, RowsExceededException, WriteException, IOException 
 	{
 			  StringBuffer TC012r=new StringBuffer();
 				  try
@@ -486,8 +415,92 @@ public class Arthadb_Automation
 						  e1.printStackTrace();
 				  } 
 	} 
+
+	/*
+	 * Customer Name Check
+	 * 			1. Here we are Validating Both First & Last Name
+	 * 			2. Both are Mandatory
+	 * 			3. Both Names Allow Only Alphabets (a to z / A to Z)
+	 */
+	@Test(priority=11)
+	public void ArthaDB_Customer_First_Last_Name_Check_TC011() throws SQLException, RowsExceededException, WriteException, IOException 
+	{
+			  StringBuffer TC009r=new StringBuffer();
+				  try
+				  { 
+					  int Noc=0; 
+					  ResultSet rs=stmt.executeQuery("SELECT * FROM customers WHERE FirstName RLIKE '[[:<:]][a-z][[:>:]]' or LastName RLIKE '[[:<:]][a-z][[:>:]]' or FirstName is null or LastName is null"); 
+					  List<String> TC009rs=new ArrayList<String>();
+					  while (rs.next()) 
+					  {
+						  Noc=rs.getRow();
+						  TC009rs.add(rs.getString("SSN"));
+						  
+					  }
+					  if(Noc==0)
+						  {
+					        Assert.assertEquals("CUSTOMERS-First & Last Name check is PASSED", 0, Noc);
+						  }
+						  else
+						  {
+								for(int i=0;i<TC009rs.size();i++)
+								{
+									  TC009r.append(TC009rs.get(i)+","); 	  
+								}
+						        Assert.assertEquals("CUSTOMERS-First & Last Name check is Failed at SSN="+TC009r, 0, Noc);
+						  }  
+				  }
+				  catch (Exception e1) 
+				  {
+						  e1.printStackTrace();
+				  } 
+	}
 	
-	//Customer_PrimaryPhoneNumber_Check Test Script
+	/*
+	 * Here we will Check Customer SSN Format
+	 * 		1. SSN is Mandatory
+	 * 		2. SSN is in Specified Format like 123-45-6796 
+	 */
+	@Test(priority=12)
+	public void ArthaDB_Customers_SSN_Check_TC012() throws SQLException, RowsExceededException, WriteException, IOException 
+	{
+			 StringBuffer TC010r=new StringBuffer();
+				  try
+				  { 
+					  int Noc=0; 
+					  ResultSet rs=stmt.executeQuery("SELECT * FROM customers WHERE SSN not RLIKE '[[:<:]][0-9]{3}[[:>:]](-)[[:<:]][0-9]{2}[[:>:]](-)[[:<:]][0-9]{4}[[:>:]]' or SSN is null"); 
+					  List<String> TC010rs=new ArrayList<String>();
+					  while (rs.next()) 
+					  {
+						  Noc=rs.getRow();
+						  TC010rs.add(rs.getString("CustomerPK"));
+						  
+					  }
+					  if(Noc==0)
+						  {
+					        Assert.assertEquals("CUSTOMERS- SSN check is PASSED", 0, Noc);
+					        
+						  }
+						  else
+						  {
+								for(int i=0;i<TC010rs.size();i++)
+								{
+									  TC010r.append(TC010rs.get(i)+","); 
+								}
+						        Assert.assertEquals("CUSTOMERS- SSN check is Failed at CustomerPK="+TC010r, 0, Noc);
+						  }  
+				  }
+				  catch (Exception e1) 
+				  {
+						  e1.printStackTrace();
+				  } 
+	}
+	
+	/*
+	 * Customer Phone number is mandatory and it is in specified format (for example +1 333 333 4444)
+	 * Input Excel Phone number does not contain PLUS (+) symbol, it contain hyphen(-)
+	 * Need to replay hyphen symbol into Space. 
+	 */
 	@Test(priority=13)
 	public void ArthaDB_PrimaryPhoneNumber_TC013() throws SQLException
 	{
@@ -513,7 +526,11 @@ public class Arthadb_Automation
 			Assert.assertEquals("Customer - PrimaryPhoneNumber check is Failed at SSN="+Phone_r, 0, Noc);
 		}
 	}
-	//Customer_Details_Update_Check Test Script
+
+	/*
+	 * Customer Details Update Check
+	 * Here If any Customer Change Those respective Details, we will find those SSN Numbers.
+	 */
 	@Test(priority=14)
 	public void ArthaDB_Customer_Details_Update_Check_TC014() throws SQLException
 	{
@@ -539,30 +556,4 @@ public class Arthadb_Automation
 			Assert.assertEquals("Customer - Details are updated at Customer SSN= "+Update_r, 0, Noc);
 		}
 	}
-/*	//Customer_Details_Insert_Check Test Script
-	@Test(priority=15)
-	public void ArthaDB_Customer_Details_Insert_Check_TC015() throws SQLException
-	{
-		int Noc=0; 
-		ResultSet rs=stmt.executeQuery("SELECT max(CAT_ID), max(ID) as ID FROM arthadb.customers_audit_table where action='Insert' group by action");
-		List<String> Update_rs=new ArrayList<String>();
-		while(rs.next())
-		{
-			Noc=rs.getRow();
-			Update_rs.add(rs.getString("ID"));
-		}
-		if(Noc==0)
-		{
-			Assert.assertEquals("Customer - Details check is Passed",0,Noc);
-		}
-		else
-		{
-			StringBuffer Update_r=new StringBuffer();
-			for(int k=0;k<Update_rs.size();k++)
-			{
-				Update_r.append(Update_rs.get(k)+",");
-			}
-			Assert.assertEquals("Customer - Details are Inserted at Customer ID= "+Update_r, 0, Noc);
-		}
-	}*/
 }
