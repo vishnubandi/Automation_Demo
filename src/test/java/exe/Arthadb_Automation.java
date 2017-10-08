@@ -492,7 +492,7 @@ public class Arthadb_Automation
 	public void ArthaDB_PrimaryPhoneNumber_TC013() throws SQLException
 	{
 		int Noc=0; 
-		ResultSet rs=stmt.executeQuery("SELECT * FROM arthadb.customers where PrimaryPhoneNumber is null");
+		ResultSet rs=stmt.executeQuery("SELECT * FROM customers WHERE PrimaryPhoneNumber not REGEXP '[+][1] [0-9]{3} [0-9]{3} [0-9]{4}' or PrimaryPhoneNumber is null");
 		List<String> Phone_rs=new ArrayList<String>();
 		while(rs.next())
 		{
