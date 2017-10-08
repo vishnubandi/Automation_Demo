@@ -252,7 +252,6 @@ public class Arthadb_Automation
 					  if(Noc==0)
 						  {
 					        Assert.assertEquals("PAYMENTS-Transaction Amount check is PASSED", 0, Noc);
-					        
 						  }
 						  else
 						  {
@@ -289,7 +288,6 @@ public class Arthadb_Automation
 					  if(Noc==0)
 						  {
 					        Assert.assertEquals("PAYMENTS-Charge Sign Codes check is PASSED", 0, Noc);
-					        
 						  }
 						  else
 						  {
@@ -320,7 +318,6 @@ public class Arthadb_Automation
 					  {
 						  Noc=rs.getRow();
 						  TC008rs.add(rs.getString("Invoice_Number"));
-						  
 					  }
 					  if(Noc==0)
 						  {
@@ -356,7 +353,6 @@ public class Arthadb_Automation
 					  {
 						  Noc=rs.getRow();
 						  TC011rs.add(rs.getString("Partner_Account_Number"));
-						  
 					  }
 					  if(Noc==0)
 						  {
@@ -393,19 +389,16 @@ public class Arthadb_Automation
 					  {
 						  Noc=rs.getRow();
 						  TC012rs.add(rs.getString("Partner_Account_Number"));
-						  
 					  }
 					  if(Noc==0)
 						  {
 					        Assert.assertEquals("PARTNERS-City check is PASSED", 0, Noc);
-					        
 						  }
 						  else
 						  {
 								for(int i=0;i<TC012rs.size();i++)
 								{
-									  TC012r.append(TC012rs.get(i)+","); 
-									  
+									  TC012r.append(TC012rs.get(i)+",");   
 								}
 						        Assert.assertEquals("PARTNERS-City check is Failed at Partner_Account_Number="+TC012r, 0, Noc);
 						  }  
